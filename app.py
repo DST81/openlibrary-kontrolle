@@ -3,8 +3,7 @@ import json
 import os
 from datetime import date, timedelta
 import math
-import locale
-locale.setlocale(locale.LC_TIME, "de_DE.UTF-8")
+from babel.dates import format_date
 
 DATE_FORMAT = "%Y-%m-%d"
 JSON_FILE = "kontrollen.json"
@@ -116,7 +115,7 @@ for week_days in weeks:
 
         with col:
             st.markdown(f'<div class="card {color_class}">', unsafe_allow_html=True)
-            st.markdown(f"**{tag_date.strftime('%a')} {tag_date.strftime('%d.%m')}**")
+            st.markdown(f"**{fromat_date(tag_date, format='EEE', locale='de)} {tag_date.strftime('%d.%m')}**")
 
             if tag in kontrollen:
                 checked_by = kontrollen[tag]["mitarbeiter"]
