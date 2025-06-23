@@ -202,6 +202,7 @@ if st.button('✅ Kontrolle speichern'):
             "bemerkung": bemerkung.strip(),
         }
         sha=save_kontrollen(kontrollen, sha)
+        st.rerun()
         st.success(
             f"Kontrolle am {format_date(kontroll_tag, format='EEE dd.MM.yyyy', locale='de')} von {mitarbeiter} gespeichert!\nBemerkung: {bemerkung}"
         )
