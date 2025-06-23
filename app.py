@@ -19,7 +19,7 @@ repo= g.get_user(GITHUB_USER).get_repo(REPO_NAME)
 #Hilfsfunktion
 def load_kontrollen():
     try:
-        contents = repo.get_contenst(FILE_PATH, ref=BRANCH)
+        contents = repo.get_contents(FILE_PATH, ref=BRANCH)
         data = json.loads(contents.decoded_content.decode())
         return data, contents.sha
     expect Exception:
