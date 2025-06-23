@@ -22,7 +22,7 @@ def load_kontrollen():
         contents = repo.get_contents(FILE_PATH, ref=BRANCH)
         data = json.loads(contents.decoded_content.decode())
         return data, contents.sha
-    expect Exception:
+    except Exception:
         return {}, None
 def save_kontrollen(kontrollen, sha):
     new_content = json.dumps(kontrollen, indent=2, ensure_ascii=False)
