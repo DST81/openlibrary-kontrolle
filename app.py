@@ -115,7 +115,7 @@ for week_days in weeks:
 
         with col:
             st.markdown(f'<div class="card {color_class}">', unsafe_allow_html=True)
-            st.markdown(f"**{fromat_date(tag_date, format='EEE', locale='de)} {tag_date.strftime('%d.%m')}**")
+            st.markdown(f"**{format_date(tag_date, format='EEE dd.MM', locale='de)}**")
 
             if tag in kontrollen:
                 checked_by = kontrollen[tag]["mitarbeiter"]
@@ -164,7 +164,7 @@ st.markdown('### Kontrolle nachtragen')
 kontroll_tag=st.selectbox(
     "Wähle den Tag aus:",
     options= days,
-    format_func=lambda d: d.strftime('%a %d.%m.%Y'),
+    format_func=lambda d: format_date(d, format='EEE dd.MM.yyyy', locale='de'),
 )
 mitarbeiter= st.selectbox('Mitarbeiterin auswählen', list(avatars.keys()))
 bemerkung = st.text_area('Bemerkung')
