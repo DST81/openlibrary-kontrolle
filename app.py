@@ -115,7 +115,7 @@ for week_days in weeks:
 
         with col:
             st.markdown(f'<div class="card {color_class}">', unsafe_allow_html=True)
-            st.markdown(f"**{format_date(tag_date, format='EEE dd.MM', locale='de)}**")
+            st.markdown(f"**{format_date(tag_date, format='EEE dd.MM', locale='de')}**")
 
             if tag in kontrollen:
                 checked_by = kontrollen[tag]["mitarbeiter"]
