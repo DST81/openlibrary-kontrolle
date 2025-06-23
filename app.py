@@ -180,5 +180,5 @@ if st.button('✅ Kontrolle speichern'):
         with open(JSON_FILE, "w") as f:
             json.dump(kontrollen, f, indent=4)
     st.success(
-        f"Kontrolle am {kontroll_tag.strftime('%a %d.%m.%Y')} von {mitarbeiter} gespeichert!\nBemerkung: {bemerkung}"
+        f"Kontrolle am {format_date(kontroll_tag, format='EEE dd.MM.yyyy', locale='de')} von {mitarbeiter} gespeichert!\nBemerkung: {bemerkung}"
     )
