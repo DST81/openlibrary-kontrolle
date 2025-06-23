@@ -1,12 +1,45 @@
 import streamlit as st
 import json
 import os
+from github import Github
 from datetime import date, timedelta
 import math
 from babel.dates import format_date
 
+#Repo-Infos
+GITHUB_USER="DST81"
+REPO_NAME="openlibrary-kontrolle"
+BRANCH= "main"
+FILE_PATH = "kontrollen.json"
+
+token=st.secrets['github_token']
+g=Github(token)
+repo= g.get_user(GITHUB_USER).get_repo(REPO_NAME)
+
+#Hilfsfunktion
+def load_kontrollen():
+    try:
+        contents = repo.get_contenst(FILE_PATH, ref=BRANCH)
+        data = json.loads(contents.decoded_content.decode())
+        return data, contents.sha
+    expect Exception:
+        return {}, None
+def save_kontrollen(kontrollen, sha):
+    new_content = json.dumps(kontrollen, indent=2, ensure_ascii=False)
+    commit_message = f"Update Kontrollen am {date.today().isoformat()}"
+    if sha:
+        repo.update_file(FILE_PATH, commit_message, new_content, sha, branch=BRANCH)
+    else:
+        repo.create_file(FILE_PATH, commit_message, new_content, branch=BRANCH)
+    #Neustes sha holen für nächsten Update
+    contents = repo.get_contents(FILE_PATH, ref=BRANCH)
+    return contents.sha
+
+#Initial laden
+kontrollen, sha = load_kontrollen()
+
 DATE_FORMAT = "%Y-%m-%d"
-JSON_FILE = "kontrollen.json"
+JSON_FILE = kontrollen
 st.set_page_config(page_title="OpenLibrary Ferienkontrolle 🧹", page_icon="📚")
 
 #CSS für Karten
@@ -55,13 +88,6 @@ bemerkung =st.text_area(
     "Bemerkung zur Kontrolle"
 )
 
-# JSON laden oder neu erstellen
-if os.path.exists(JSON_FILE):
-    with open(JSON_FILE, "r") as f:
-        kontrollen = json.load(f)
-else:
-    kontrollen = {}  
-
 # Check-In
 heute = date.today().isoformat()
 if st.button(f"{mitarbeiter_name} hat heute OpenLibrary kontrolliert"):
@@ -69,9 +95,8 @@ if st.button(f"{mitarbeiter_name} hat heute OpenLibrary kontrolliert"):
         "mitarbeiter": mitarbeiter_name,
         "bemerkung": bemerkung
         }
-    with open("kontrollen.json", "w") as f:
-        json.dump(kontrollen, f, indent=2)
-    st.success(f"Danke, {mitarbeiter_name}! – Kontrolle erledigt!")
+    sha = save_kontrollen(kontrollen, sha)
+    st.success(f"Danke, {mitarbeiter_name}! – Kontrolle am {heute} erledigt!")
 
 st.markdown("---")
 
@@ -91,11 +116,12 @@ today=date.today()
 days=[d for d in days if d <=today]
 weeks=[days[i:i+7] for i in range(0, len(days), 7)]
 weeks.reverse()
+
 controlled_days= {date.fromisoformat(t) for t in kontrollen.keys()}
 
 # Diese Woche
 st.markdown("### Kontrollierte Tage")
-today = date.today()
+
 monday = today - timedelta(days=today.weekday())
 current_week_days = [monday + timedelta(days=i) for i in range(7)]
 
@@ -132,9 +158,8 @@ for week_days in weeks:
                     cols_btn = st.columns(2)
                     with cols_btn[0]:
                         if st.button("💾", key=f"save_{tag}"):
-                            kontrollen[tag]["bemerkung"] = new_note
-                            with open("kontrollen.json", "w") as f:
-                                json.dump(kontrollen, f, indent=2)
+                            kontrollen[tag]["bemerkung"] = new_note.strip()
+                            sha=save_kontrollen(kontrollen, sha)
                             st.session_state.edit_mode = None
                             st.rerun()
                     with cols_btn[1]:
@@ -152,14 +177,13 @@ for week_days in weeks:
                     with cols_btn[1]:
                         if st.button("🗑️", key=f"delete_{tag}"):
                             del kontrollen[tag]
-                            with open("kontrollen.json", "w") as f:
-                                json.dump(kontrollen, f, indent=2)
+                            sha= save_kontrollen(kontrollen, sha)
                             st.rerun()
             else:
                 st.markdown("❌ nicht kontrolliert")
             st.markdown("</div>", unsafe_allow_html=True)
 
-#Kontrolle und Bemerkung
+#Kontrolle und Bemerkung nachtragen
 st.markdown('### Kontrolle nachtragen')
 kontroll_tag=st.selectbox(
     "Wähle den Tag aus:",
@@ -177,8 +201,7 @@ if st.button('✅ Kontrolle speichern'):
             "mitarbeiter":mitarbeiter.strip(),
             "bemerkung": bemerkung.strip(),
         }
-        with open(JSON_FILE, "w") as f:
-            json.dump(kontrollen, f, indent=4)
-    st.success(
-        f"Kontrolle am {format_date(kontroll_tag, format='EEE dd.MM.yyyy', locale='de')} von {mitarbeiter} gespeichert!\nBemerkung: {bemerkung}"
-    )
+        sha=save_kontrollen(kontrollen, sha)
+        st.success(
+            f"Kontrolle am {format_date(kontroll_tag, format='EEE dd.MM.yyyy', locale='de')} von {mitarbeiter} gespeichert!\nBemerkung: {bemerkung}"
+        )
