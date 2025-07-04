@@ -154,7 +154,7 @@ if aktuell_verantwortliche in avatars:
 else:
     default_index = 0
 
-ntwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
+st.success(f"Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
     st.rerun()
 # Tage in Wochenblöcken
 for week_days in weeks:
