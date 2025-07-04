@@ -21,32 +21,6 @@ today = date.today()
 year, week, _ = today.isocalendar()
 kw_key = f"{year}-W{week:02d}"
 
-# Extrahiere Wochenverantwortung oder leere initialisieren
-wochenverantwortung = kontrollen.get("wochenverantwortung", {})
-aktuell_verantwortliche = wochenverantwortung.get(kw_key, None)
-
-st.markdown(f"## 👩‍💼 Wochenverantwortliche KW {week}")
-
-# Anzeige der aktuellen Verantwortlichen
-if aktuell_verantwortliche:
-    st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
-else:
-    st.warning("⚠️ Noch keine Wochenverantwortliche zugewiesen.")
-
-# Auswahl über Dropdown
-neue_verantwortliche = st.selectbox(
-    "➕ Verantwortliche Person für diese Woche zuweisen:",
-    options=list(avatars.keys()),
-    index=list(avatars.keys()).index(aktuell_verantwortliche) if aktuell_verantwortliche in avatars else 0,
-    key="wochenverantwortung_dropdown"
-)
-
-# Speichern bei Klick
-if st.button("✅ Wochenverantwortliche speichern"):
-    kontrollen.setdefault("wochenverantwortung", {})[kw_key] = neue_verantwortliche
-    sha = save_kontrollen(kontrollen, sha)
-    st.success(f"✅ Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
-    st.rerun()
 
 #Hilfsfunktion
 def load_kontrollen():
@@ -159,6 +133,32 @@ st.markdown("### Kontrollierte Tage")
 monday = today - timedelta(days=today.weekday())
 current_week_days = [monday + timedelta(days=i) for i in range(7)]
 
+# Extrahiere Wochenverantwortung oder leere initialisieren
+wochenverantwortung = kontrollen.get("wochenverantwortung", {})
+aktuell_verantwortliche = wochenverantwortung.get(kw_key, None)
+
+st.markdown(f"## 👩‍💼 Wochenverantwortliche KW {week}")
+
+# Anzeige der aktuellen Verantwortlichen
+if aktuell_verantwortliche:
+    st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
+else:
+    st.warning("⚠️ Noch keine Wochenverantwortliche zugewiesen.")
+
+# Auswahl über Dropdown
+neue_verantwortliche = st.selectbox(
+    "➕ Verantwortliche Person für diese Woche zuweisen:",
+    options=list(avatars.keys()),
+    index=list(avatars.keys()).index(aktuell_verantwortliche) if aktuell_verantwortliche in avatars else 0,
+    key="wochenverantwortung_dropdown"
+)
+
+# Speichern bei Klick
+if st.button("✅ Wochenverantwortliche speichern"):
+    kontrollen.setdefault("wochenverantwortung", {})[kw_key] = neue_verantwortliche
+    sha = save_kontrollen(kontrollen, sha)
+    st.success(f"✅ Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
+    st.rerun()
 # Tage in Wochenblöcken
 for week_days in weeks:
     cols = st.columns(7)  # 7 Spalten für die Woche
