@@ -43,6 +43,11 @@ def save_kontrollen(kontrollen, sha):
 
 #Initial laden
 kontrollen, sha = load_kontrollen()
+
+# 🛠️ WICHTIG: sicherstellen, dass 'wochenverantwortung' existiert
+if not isinstance(kontrollen, dict):
+    kontrollen = {}
+
 if "wochenverantwortung" not in kontrollen:
     kontrollen["wochenverantwortung"] = {}
 
