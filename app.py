@@ -69,6 +69,8 @@ def save_kontrollen(kontrollen, sha):
 
 #Initial laden
 kontrollen, sha = load_kontrollen()
+if "wochenverantwortung" not in kontrollen:
+    kontrollen["wochenverantwortung"] = {}
 
 DATE_FORMAT = "%Y-%m-%d"
 JSON_FILE = kontrollen
