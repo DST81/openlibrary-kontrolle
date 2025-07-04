@@ -153,9 +153,6 @@ if aktuell_verantwortliche in avatars:
     default_index = list(avatars.keys()).index(aktuell_verantwortliche)
 else:
     default_index = 0
-
-st.success(f"Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
-st.rerun()
 # Tage in Wochenblöcken
 for week_days in weeks:
     cols = st.columns(7)  # 7 Spalten für die Woche
@@ -249,4 +246,5 @@ neue_verantwortliche = st.selectbox(
 if st.button("✅ Wochenverantwortliche speichern"):
     kontrollen.setdefault("wochenverantwortung", {})[kw_key] = neue_verantwortliche
     sha = save_kontrollen(kontrollen, sha)
-    st.success(f"✅ Vera
+    st.success(f"✅ Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
+st.rerun()
