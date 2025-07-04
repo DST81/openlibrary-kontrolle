@@ -41,7 +41,7 @@ def save_kontrollen(kontrollen, sha):
     contents = repo.get_contents(FILE_PATH, ref=BRANCH)
     return contents.sha
 
-
+kontrollen, sha = load_kontrollen()
 DATE_FORMAT = "%Y-%m-%d"
 JSON_FILE = kontrollen
 st.set_page_config(page_title="OpenLibrary Ferienkontrolle 🧹", page_icon="📚")
