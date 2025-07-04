@@ -155,7 +155,7 @@ else:
     default_index = 0
 
 st.success(f"Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
-    st.rerun()
+st.rerun()
 # Tage in Wochenblöcken
 for week_days in weeks:
     cols = st.columns(7)  # 7 Spalten für die Woche
