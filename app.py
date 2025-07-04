@@ -161,9 +161,7 @@ if st.button("✅ Wochenverantwortliche speichern"):
     sha = save_kontrollen(kontrollen, sha)
     st.success(f"✅ Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
     st.rerun()
-# Extrahiere Wochenverantwortung oder leere initialisieren
-wochenverantwortung = kontrollen.get("wochenverantwortung", {})
-aktuell_verantwortliche = wochenverantwortung.get(kw_key, None)
+
 
 st.markdown(f"## 👩‍💼 Wochenverantwortliche KW {week}")
 
