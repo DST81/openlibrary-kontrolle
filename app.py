@@ -2,7 +2,7 @@ import streamlit as st
 import json
 import os
 from github import Github
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 import math
 from babel.dates import format_date
 
@@ -15,6 +15,38 @@ FILE_PATH = "kontrollen.json"
 token=st.secrets['github_token']
 g=Github(token)
 repo= g.get_user(GITHUB_USER).get_repo(REPO_NAME)
+
+# Kalenderwoche bestimmen
+today = date.today()
+year, week, _ = today.isocalendar()
+kw_key = f"{year}-W{week:02d}"
+
+# Extrahiere Wochenverantwortung oder leere initialisieren
+wochenverantwortung = kontrollen.get("wochenverantwortung", {})
+aktuell_verantwortliche = wochenverantwortung.get(kw_key, None)
+
+st.markdown(f"## 👩‍💼 Wochenverantwortliche KW {week}")
+
+# Anzeige der aktuellen Verantwortlichen
+if aktuell_verantwortliche:
+    st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
+else:
+    st.warning("⚠️ Noch keine Wochenverantwortliche zugewiesen.")
+
+# Auswahl über Dropdown
+neue_verantwortliche = st.selectbox(
+    "➕ Verantwortliche Person für diese Woche zuweisen:",
+    options=list(avatars.keys()),
+    index=list(avatars.keys()).index(aktuell_verantwortliche) if aktuell_verantwortliche in avatars else 0,
+    key="wochenverantwortung_dropdown"
+)
+
+# Speichern bei Klick
+if st.button("✅ Wochenverantwortliche speichern"):
+    kontrollen.setdefault("wochenverantwortung", {})[kw_key] = neue_verantwortliche
+    sha = save_kontrollen(kontrollen, sha)
+    st.success(f"✅ Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
+    st.rerun()
 
 #Hilfsfunktion
 def load_kontrollen():
