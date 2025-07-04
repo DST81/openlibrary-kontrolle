@@ -2,7 +2,7 @@ import streamlit as st
 import json
 import os
 from github import Github
-from datetime import date, timedelta, datetime
+from datetime import date, timedelta
 import math
 from babel.dates import format_date
 
@@ -41,15 +41,6 @@ def save_kontrollen(kontrollen, sha):
     contents = repo.get_contents(FILE_PATH, ref=BRANCH)
     return contents.sha
 
-#Initial laden
-kontrollen, sha = load_kontrollen()
-
-# 🛠️ WICHTIG: sicherstellen, dass 'wochenverantwortung' existiert
-if not isinstance(kontrollen, dict):
-    kontrollen = {}
-
-if "wochenverantwortung" not in kontrollen:
-    kontrollen["wochenverantwortung"] = {}
 
 DATE_FORMAT = "%Y-%m-%d"
 JSON_FILE = kontrollen
@@ -98,7 +89,7 @@ mitarbeiter_name = st.selectbox(
 
 #Bemerkung schreiben
 bemerkung =st.text_area(
-    "Bemerkung zur Kontrolle"
+    "Bemerkung"
 )
 
 # Check-In
@@ -150,13 +141,40 @@ if aktuell_verantwortliche:
 else:
     st.warning("⚠️ Noch keine Wochenverantwortliche zugewiesen.")
 
-# Auswahl über Dropdown
+# Sicherer Index für Dropdown (wenn aktuell nicht gesetzt, 0 als Default)
+if aktuell_verantwortliche in avatars:
+    default_index = list(avatars.keys()).index(aktuell_verantwortliche)
+else:
+    default_index = 0
+
+# Auswahl über Dropdown mit sicherem Default-Index
 neue_verantwortliche = st.selectbox(
     "➕ Verantwortliche Person für diese Woche zuweisen:",
     options=list(avatars.keys()),
-    index=list(avatars.keys()).index(aktuell_verantwortliche) if aktuell_verantwortliche in avatars else 0,
+    index=default_index,
     key="wochenverantwortung_dropdown"
 )
+
+# Speichern bei Klick
+if st.button("✅ Wochenverantwortliche speichern"):
+    kontrollen.setdefault("wochenverantwortung", {})[kw_key] = neue_verantwortliche
+    sha = save_kontrollen(kontrollen, sha)
+    st.success(f"✅ Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
+    st.rerun()
+
+# --- Ende des Ausschnitts ---
+Wo genau ändern?
+Im Originalcode einfach diesen Block ersetzen (den Teil ab
+
+python
+Kopieren
+Bearbeiten
+# Extrahiere Wochenverantwortung oder leere initialisieren
+wochenverantwortung = kontrollen.get("wochenverantwortung", {})
+aktuell_verantwortliche = wochenverantwortung.get(kw_key, None)
+
+st.markdown(f"## 👩‍💼 Wochenverantwortliche KW {week}")
+
 
 # Speichern bei Klick
 if st.button("✅ Wochenverantwortliche speichern"):
