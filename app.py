@@ -121,7 +121,14 @@ days=[d for d in days if d <=today]
 weeks=[days[i:i+7] for i in range(0, len(days), 7)]
 weeks.reverse()
 
-controlled_days= {date.fromisoformat(t) for t in kontrollen.keys()}
+controlled_days = set()
+for t in kontrollen.keys():
+    try:
+        dt = date.fromisoformat(t)
+        controlled_days.add(dt)
+    except ValueError:
+        # Schlüssel ist kein Datum, einfach ignorieren
+        pass
 
 # Diese Woche
 st.markdown("### Kontrollierte Tage")
