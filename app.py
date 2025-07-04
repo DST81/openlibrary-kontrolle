@@ -162,13 +162,6 @@ neue_verantwortliche = st.selectbox(
     key="wochenverantwortung_dropdown"
 )
 
-# Speichern bei Klick
-if st.button("✅ Wochenverantwortliche speichern"):
-    kontrollen.setdefault("wochenverantwortung", {})[kw_key] = neue_verantwortliche
-    sha = save_kontrollen(kontrollen, sha)
-    st.success(f"✅ Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
-    st.rerun()
-
 
 st.markdown(f"## 👩‍💼 Wochenverantwortliche KW {week}")
 
