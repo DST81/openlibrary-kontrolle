@@ -154,23 +154,7 @@ if aktuell_verantwortliche in avatars:
 else:
     default_index = 0
 
-# Auswahl über Dropdown mit sicherem Default-Index
-neue_verantwortliche = st.selectbox(
-    "➕ Verantwortliche Person für diese Woche zuweisen:",
-    options=list(avatars.keys()),
-    index=default_index,
-    key="wochenverantwortung_dropdown"
-)
-
-
-st.markdown(f"## 👩‍💼 Wochenverantwortliche KW {week}")
-
-
-# Speichern bei Klick
-if st.button("✅ Wochenverantwortliche speichern"):
-    kontrollen.setdefault("wochenverantwortung", {})[kw_key] = neue_verantwortliche
-    sha = save_kontrollen(kontrollen, sha)
-    st.success(f"✅ Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
+ntwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
     st.rerun()
 # Tage in Wochenblöcken
 for week_days in weeks:
@@ -253,3 +237,16 @@ if st.button('✅ Kontrolle speichern'):
         st.success(
             f"Kontrolle am {format_date(kontroll_tag, format='EEE dd.MM.yyyy', locale='de')} von {mitarbeiter} gespeichert!\nBemerkung: {bemerkung}"
         )
+# Auswahl über Dropdown mit sicherem Default-Index
+neue_verantwortliche = st.selectbox(
+    "➕ Verantwortliche Person für diese Woche zuweisen:",
+    options=list(avatars.keys()),
+    index=default_index,
+    key="wochenverantwortung_dropdown"
+)
+
+# Speichern bei Klick
+if st.button("✅ Wochenverantwortliche speichern"):
+    kontrollen.setdefault("wochenverantwortung", {})[kw_key] = neue_verantwortliche
+    sha = save_kontrollen(kontrollen, sha)
+    st.success(f"✅ Vera
