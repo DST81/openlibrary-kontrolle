@@ -30,6 +30,23 @@ def load_kontrollen():
         return data, contents.sha
     except Exception:
         return {}, None
+
+# Struktur prüfen und ggf. migrieren
+def migrate_kontrollen_if_needed(raw_data):
+    if "kontrollen" in raw_data and "wochenverantwortung" in raw_data:
+        return raw_data  # Alles schon gut
+    kontrollen = {}
+    wochenverantwortung = raw_data.get("wochenverantwortung", {})
+    for key, value in raw_data.items():
+        try:
+            date.fromisoformat(key)
+            kontrollen[key] = value
+        except ValueError:
+            pass  # andere Keys ignorieren
+    return {
+        "kontrollen": kontrollen,
+        "wochenverantwortung": wochenverantwortung
+    }
 def save_kontrollen(kontrollen, sha):
     new_content = json.dumps(kontrollen, indent=2, ensure_ascii=False)
     commit_message = f"Update Kontrollen am {date.today().isoformat()}"
@@ -40,6 +57,12 @@ def save_kontrollen(kontrollen, sha):
     #Neustes sha holen für nächsten Update
     contents = repo.get_contents(FILE_PATH, ref=BRANCH)
     return contents.sha
+    
+# Daten laden
+raw_data, sha = load_kontrollen()
+data = migrate_kontrollen_if_needed(raw_data)
+kontrollen = data["kontrollen"]
+wochenverantwortung = data["wochenverantwortung"]
 
 kontrollen, sha = load_kontrollen()
 DATE_FORMAT = "%Y-%m-%d"
@@ -95,7 +118,7 @@ if st.button(f"{mitarbeiter_name} hat heute OpenLibrary kontrolliert"):
         "mitarbeiter": mitarbeiter_name,
         "bemerkung": bemerkung
         }
-    sha = save_kontrollen(kontrollen, sha)
+    sha = save_kontrollen({"kontrollen": kontrollen, "wochenverantwortung": wochenverantwortung},sha)
     st.success(f"Danke, {mitarbeiter_name}! – Kontrolle am {heute} erledigt!")
 
 st.markdown("---")
@@ -133,7 +156,6 @@ monday = today - timedelta(days=today.weekday())
 current_week_days = [monday + timedelta(days=i) for i in range(7)]
 
 # Extrahiere Wochenverantwortung oder leere initialisieren
-wochenverantwortung = kontrollen.get("wochenverantwortung", {})
 aktuell_verantwortliche = wochenverantwortung.get(kw_key, None)
 
 st.markdown(f"## 👩‍💼 Wochenverantwortliche KW {week}")
@@ -174,35 +196,27 @@ for week_days in weeks:
                 st.markdown(f"**{checked_by}**")
 
                 if st.session_state.edit_mode == tag:
-                    new_note = st.text_area(
-                        f"Bearbeite Bemerkung:",
-                        value=note,
-                        key=f"note_input_{tag}"
-                    )
-                    cols_btn = st.columns(2)
-                    with cols_btn[0]:
-                        if st.button("💾", key=f"save_{tag}"):
-                            kontrollen[tag]["bemerkung"] = new_note.strip()
-                            sha=save_kontrollen(kontrollen, sha)
-                            st.session_state.edit_mode = None
-                            st.rerun()
-                    with cols_btn[1]:
-                        if st.button("❌", key=f"cancel_{tag}"):
-                            st.session_state.edit_mode = None
-                            st.rerun()
+                    new_note = st.text_area("Bearbeite Bemerkung:", value=note, key=f"note_input_{tag}"),
+                    c1, c2 = st.columns(2)
+                    if c1.button("💾", key=f"save_{tag}"):
+                        kontrollen[tag]["bemerkung"] = new_note.strip()
+                        sha=save_kontrollen({"kontrollen":kontrollen,"wochenverantwortung":wochenverantwortung}, sha)
+                        st.session_state.edit_mode = None
+                        st.rerun()
+                    if c2.button("❌", key=f"cancel_{tag}"):
+                        st.session_state.edit_mode = None
+                        st.rerun()
                 else:
                     if note:
                         st.caption(f"💬 {note}")
-                    cols_btn = st.columns([1, 1])
-                    with cols_btn[0]:
-                        if st.button("✏️", key=f"edit_{tag}"):
-                            st.session_state.edit_mode = tag
-                            st.rerun()
-                    with cols_btn[1]:
-                        if st.button("🗑️", key=f"delete_{tag}"):
-                            del kontrollen[tag]
-                            sha= save_kontrollen(kontrollen, sha)
-                            st.rerun()
+                    c1,c2 = st.columns(2)
+                    if c1.button("✏️", key=f"edit_{tag}"):
+                        st.session_state.edit_mode = tag
+                        st.rerun()
+                    if c2.button("🗑️", key=f"delete_{tag}"):
+                        del kontrollen[tag]
+                        sha= save_kontrollen({"kontrollen":kontrollen,"wochenverantwortung":wochenverantwortung}, sha)
+                        st.rerun()
             else:
                 st.markdown("❌ nicht kontrolliert")
             st.markdown("</div>", unsafe_allow_html=True)
@@ -216,6 +230,7 @@ kontroll_tag=st.selectbox(
 )
 mitarbeiter= st.selectbox('Mitarbeiterin auswählen', list(avatars.keys()))
 bemerkung = st.text_area('Bemerkung')
+
 if st.button('✅ Kontrolle speichern'):
     if not mitarbeiter.strip():
         st.error('Bitte deinen Namen eingeben!')
@@ -225,22 +240,15 @@ if st.button('✅ Kontrolle speichern'):
             "mitarbeiter":mitarbeiter.strip(),
             "bemerkung": bemerkung.strip(),
         }
-        sha=save_kontrollen(kontrollen, sha)
+        sha=save_kontrollen({"kontrollen": kontrollen, "wochenverantwortung": wochenverantwortung}, sha)
         st.rerun()
         st.success(
             f"Kontrolle am {format_date(kontroll_tag, format='EEE dd.MM.yyyy', locale='de')} von {mitarbeiter} gespeichert!\nBemerkung: {bemerkung}"
         )
 # Auswahl über Dropdown mit sicherem Default-Index
-neue_verantwortliche = st.selectbox(
-    "➕ Verantwortliche Person für diese Woche zuweisen:",
-    options=list(avatars.keys()),
-    index=default_index,
-    key="wochenverantwortung_dropdown"
-)
-
-# Speichern bei Klick
-if st.button("✅ Wochenverantwortliche speichern"):
-    kontrollen.setdefault("wochenverantwortung", {})[kw_key] = neue_verantwortliche
-    sha = save_kontrollen(kontrollen, sha)
+neue_verantwortliche = st.selectbox("➕ Verantwortliche Person für diese Woche zuweisen:", list(avatars.keys()), index=default_index)
+if st.button("✅ Wochenverantwortliche speichern", key="save_wochen"):
+    wochenverantwortung[kw_key] = neue_verantwortliche
+    sha = save_kontrollen({"kontrollen": kontrollen, "wochenverantwortung": wochenverantwortung}, sha)
     st.success(f"✅ Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
     st.rerun()
