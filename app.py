@@ -83,14 +83,10 @@ avatars = {
 
 # Mitarbeiter auswählen
 mitarbeiter_name = st.selectbox(
-    "Bitte auswählen, wer du bist:",
+    "Bitte auswählen:",
     list(avatars.keys())
 )
 
-#Bemerkung schreiben
-bemerkung =st.text_area(
-    "Bemerkung"
-)
 
 # Check-In
 heute = date.today().isoformat()
@@ -109,7 +105,7 @@ if 'edit_mode' not in st.session_state:
     st.session_state.edit_mode = None
 
 # Ferienzeitraum (hier anpassen)
-ferien_start =date(2025,6,1)
+ferien_start =date(2025,6,29)
 ferien_ende =date(2025,8,31)
 
 
@@ -247,4 +243,4 @@ if st.button("✅ Wochenverantwortliche speichern"):
     kontrollen.setdefault("wochenverantwortung", {})[kw_key] = neue_verantwortliche
     sha = save_kontrollen(kontrollen, sha)
     st.success(f"✅ Verantwortliche für KW {week} ist jetzt: **{neue_verantwortliche}**")
-st.rerun()
+    st.rerun()
