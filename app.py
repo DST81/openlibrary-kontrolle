@@ -50,10 +50,18 @@ def migrate_kontrollen_if_needed(raw_data):
 def save_kontrollen(kontrollen, sha):
     new_content = json.dumps(kontrollen, indent=2, ensure_ascii=False)
     commit_message = f"Update Kontrollen am {date.today().isoformat()}"
-    if sha:
-        repo.update_file(FILE_PATH, commit_message, new_content, sha, branch=BRANCH)
-    else:
-        repo.create_file(FILE_PATH, commit_message, new_content, branch=BRANCH)
+    try:
+        if sha:
+            repo.update_file(FILE_PATH, commit_message, new_content, sha, branch=BRANCH)
+        else:
+            repo.create_file(FILE_PATH, commit_message, new_content, branch=BRANCH)
+    except GithubException as e:
+        if e.status == 422 and "already exists" in str(e):
+            # Datei existiert bereits – trotzdem update versuchen
+            contents = repo.get_contents(FILE_PATH, ref=BRANCH)
+            repo.update_file(FILE_PATH, commit_message, new_content, contents.sha, branch=BRANCH)
+        else:
+            raise
     #Neustes sha holen für nächsten Update
     contents = repo.get_contents(FILE_PATH, ref=BRANCH)
     return contents.sha
