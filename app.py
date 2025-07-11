@@ -240,11 +240,12 @@ if st.button('✅ Kontrolle speichern'):
             "mitarbeiter":mitarbeiter.strip(),
             "bemerkung": bemerkung.strip(),
         }
+        kontrollen['wochenverwantwortung'] = wochenverantwortung
         sha=save_kontrollen({"kontrollen": kontrollen, "wochenverantwortung": wochenverantwortung}, sha)
-        st.rerun()
         st.success(
             f"Kontrolle am {format_date(kontroll_tag, format='EEE dd.MM.yyyy', locale='de')} von {mitarbeiter} gespeichert!\nBemerkung: {bemerkung}"
         )
+        st.rerun()
 # Auswahl über Dropdown mit sicherem Default-Index
 neue_verantwortliche = st.selectbox("➕ Verantwortliche Person für diese Woche zuweisen:", list(avatars.keys()), index=default_index)
 if st.button("✅ Wochenverantwortliche speichern", key="save_wochen"):
