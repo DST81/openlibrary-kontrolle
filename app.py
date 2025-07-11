@@ -179,7 +179,7 @@ if aktuell_verantwortliche:
         with col2:
             st.image(avatar_path, width=80)
         with col3:
-            st.markdown(f"<div style='text-align: center; font-weight: bold;'>{aktuell_verantwortliche}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='text-align: left; font-weight: bold;'>{aktuell_verantwortliche}</div>", unsafe_allow_html=True)
     else:
         st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
 else:
