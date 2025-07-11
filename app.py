@@ -71,10 +71,8 @@ def save_kontrollen(kontrollen, sha):
 # Daten laden
 raw_data, sha = load_kontrollen()
 data = migrate_kontrollen_if_needed(raw_data)
-kontrollen = data["kontrollen"]
-wochenverantwortung = data["wochenverantwortung"]
-
-kontrollen, sha = load_kontrollen()
+kontrollen = data.get("kontrollen", {})
+wochenverantwortung = data.get("wochenverantwortung", {})
 DATE_FORMAT = "%Y-%m-%d"
 JSON_FILE = kontrollen
 st.set_page_config(page_title="OpenLibrary Ferienkontrolle 🧹", page_icon="📚")
