@@ -1,31 +1,37 @@
 {
-  "2025-06-06": {
-    "mitarbeiter": "Daniela",
-    "bemerkung": "4 Kaffeetassen abgewaschen\n\n🤣👌🤣"
-  },
-  "2025-06-23": {
-    "mitarbeiter": "Susanne",
-    "bemerkung": "Wasser ausgetauscht aufgeräumt. Bücher Retoure wieder versorgt "
-  },
-  "2025-06-30": {
-    "mitarbeiter": "Susanne",
-    "bemerkung": "Habe heute Bücher versorgt und reservationen bereitgestellt. "
-  },
-  "2025-07-01": {
-    "mitarbeiter": "Janine",
-    "bemerkung": ""
-  },
-  "2025-07-06": {
-    "mitarbeiter": "Janine",
-    "bemerkung": ""
-  },
-  "2025-07-10": {
-    "mitarbeiter": "Susanne",
-    "bemerkung": "Habe alles kontrolliert und Dvd Regale geputzt."
-  },
-  "2025-07-08": {
-    "mitarbeiter": "Daniela",
-    "bemerkung": "Putztag inkl. OL-Kontrolle (mit Janine und Susanne)"
+  "kontrollen": {
+    "2025-06-06": {
+      "mitarbeiter": "Daniela",
+      "bemerkung": "4 Kaffeetassen abgewaschen\n\n🤣👌🤣"
+    },
+    "2025-06-23": {
+      "mitarbeiter": "Susanne",
+      "bemerkung": "Wasser ausgetauscht aufgeräumt. Bücher Retoure wieder versorgt "
+    },
+    "2025-06-30": {
+      "mitarbeiter": "Susanne",
+      "bemerkung": "Habe heute Bücher versorgt und reservationen bereitgestellt. "
+    },
+    "2025-07-01": {
+      "mitarbeiter": "Janine",
+      "bemerkung": ""
+    },
+    "2025-07-06": {
+      "mitarbeiter": "Janine",
+      "bemerkung": ""
+    },
+    "2025-07-10": {
+      "mitarbeiter": "Susanne",
+      "bemerkung": "Habe alles kontrolliert und Dvd Regale geputzt."
+    },
+    "2025-07-08": {
+      "mitarbeiter": "Daniela",
+      "bemerkung": "Putztag inkl. OL-Kontrolle (mit Janine und Susanne)"
+    },
+    "2025-07-11": {
+      "mitarbeiter": "Aniko",
+      "bemerkung": "blabla"
+    }
   },
   "wochenverantwortung": {
     "2025-W27": "Susanne",
