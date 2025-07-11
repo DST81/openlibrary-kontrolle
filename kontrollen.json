@@ -31,18 +31,5 @@
     "2025-07-10": {
       "mitarbeiter": "Susanne",
       "bemerkung": "Habe alles kontrolliert und Dvd Regale geputzt."
-    },
-    "2025-07-08": {
-      "mitarbeiter": "Daniela",
-      "bemerkung": "Putztag inkl. OL-Kontrolle (Susanne, Janine, Daniela)"
     }
-  },
-  "wochenverantwortung": {
-    "2025-W27": "Susanne",
-    "2025-W28": "Janine",
-    "2025-W29": "Daniela",
-    "2025-W30": "Aniko",
-    "2025-W31": "Debora",
-    "2025-W32": "Susanne"
-  }
 }
