@@ -158,8 +158,6 @@ for t in kontrollen.keys():
         # Schlüssel ist kein Datum, einfach ignorieren
         pass
 
-# Diese Woche
-st.markdown("### Kontrollierte Tage")
 
 monday = today - timedelta(days=today.weekday())
 current_week_days = [monday + timedelta(days=i) for i in range(7)]
@@ -171,12 +169,16 @@ st.markdown(f"## Wochenverantwortliche KW {week}")
 
 # Anzeige der aktuellen Verantwortlichen
 if aktuell_verantwortliche:
-    col1, col2 = st.columns([1,4])
-    with col1:
+    avatar_path = avatars.get(aktuell_verantwortliche, None)
+    if avatar_path:
+        st.markdown(f"""
+        <div style='display: flex; flex-direction: column; align-items: center; margin-bottom: 10px;">
+            <img src='{avatar_path}' alt='{aktuell_verantwortliche}' style="width:80px; height:80px; border-radius:50%; object-fit:cover;'>
+            <div style='margin-top: 5px; font-weight: bold;'>{aktuell_verantwortliche}</div>
+        </div>
+        """, unsafe_allow_html=True)
+    else:
         st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
-    with col2:
-        if aktuell_verantwortliche in avatars:
-            st.image(avatars[aktuell_verantwortliche], width=50)
 else:
     st.warning("⚠️ Noch keine Wochenverantwortliche zugewiesen.")
 
@@ -185,6 +187,10 @@ if aktuell_verantwortliche in avatars:
     default_index = list(avatars.keys()).index(aktuell_verantwortliche)
 else:
     default_index = 0
+
+# Diese Woche
+st.markdown("### Kontrollierte Tage")
+
 # Tage in Wochenblöcken
 for week_days in weeks:
     cols = st.columns(7)  # 7 Spalten für die Woche
