@@ -167,23 +167,19 @@ aktuell_verantwortliche = wochenverantwortung.get(kw_key, None)
 
 st.markdown(f"## Wochenverantwortliche KW {week}")
 
-# Anzeige der aktuellen Verantwortlichen
-import textwrap
-
 if aktuell_verantwortliche:
     avatar_path = avatars.get(aktuell_verantwortliche)
     if avatar_path:
-        html_block = textwrap.dedent(f'''
-            <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 10px;">
-                <img src="{avatar_path}" alt="{aktuell_verantwortliche}" style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
-                <div style="margin-top: 5px; font-weight: bold;">{aktuell_verantwortliche}</div>
-            </div>
-        ''')
-        st.markdown(html_block, unsafe_allow_html=True)
+        st.markdown(f"### 👩‍💼 Wochenverantwortliche KW {week}")
+        col1, col2, col3 = st.columns([1,2,1])
+        with col2:
+            st.image(avatar_path, width=100)
+            st.markdown(f"<div style='text-align: center; font-weight: bold;'>{aktuell_verantwortliche}</div>", unsafe_allow_html=True)
     else:
         st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
 else:
     st.warning("⚠️ Noch keine Wochenverantwortliche zugewiesen.")
+
 
 
 
