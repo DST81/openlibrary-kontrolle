@@ -121,6 +121,7 @@ mitarbeiter_name = st.selectbox(
 
 # Check-In
 heute = date.today().isoformat()
+bemerkung = st.text_area(f"Bemerkung für {mitarbeiter_name} am {heute}")
 if st.button(f"{mitarbeiter_name} hat heute OpenLibrary kontrolliert"):
     kontrollen[heute] = {
         "mitarbeiter": mitarbeiter_name,
