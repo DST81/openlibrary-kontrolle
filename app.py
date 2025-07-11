@@ -165,8 +165,6 @@ current_week_days = [monday + timedelta(days=i) for i in range(7)]
 # Extrahiere Wochenverantwortung oder leere initialisieren
 aktuell_verantwortliche = wochenverantwortung.get(kw_key, None)
 
-st.markdown(f"## Wochenverantwortliche KW {week}")
-
 if aktuell_verantwortliche:
     avatar_path = avatars.get(aktuell_verantwortliche)
     if avatar_path:
