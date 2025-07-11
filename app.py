@@ -178,12 +178,9 @@ if aktuell_verantwortliche:
 
         with col2:
             # Avatar und Name zusammen in einem zentrierten div
-            st.markdown(f'''
-            <div style="text-align: center;">
-                <img src="{avatar_path}" alt="{aktuell_verantwortliche}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;"/>
-                <div style="font-weight: bold; font-size: 18px; margin-top: 8px;">{aktuell_verantwortliche}</div>
-            </div>
-            ''', unsafe_allow_html=True)
+            st.image(avatar_path, width=100)
+            st.markdown(f"<div style='font-weight: bold; font-size: 18px; margin-top: 8px;'>{aktuell_verantwortliche}</div>", unsafe_allow_html=True)
+
 
     else:
         st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
