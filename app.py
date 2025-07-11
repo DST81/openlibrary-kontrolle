@@ -248,7 +248,7 @@ if st.button('✅ Kontrolle speichern'):
             "mitarbeiter":mitarbeiter.strip(),
             "bemerkung": bemerkung.strip(),
         }
-        kontrollen['wochenverwantwortung'] = wochenverantwortung
+        kontrollen['wochenverantwortung'] = wochenverantwortung
         sha=save_kontrollen(kontrollen, sha)
         st.success(
             f"Kontrolle am {format_date(kontroll_tag, format='EEE dd.MM.yyyy', locale='de')} von {mitarbeiter} gespeichert!\nBemerkung: {bemerkung}"
