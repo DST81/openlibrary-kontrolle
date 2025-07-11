@@ -171,7 +171,12 @@ st.markdown(f"## 👩‍💼 Wochenverantwortliche KW {week}")
 
 # Anzeige der aktuellen Verantwortlichen
 if aktuell_verantwortliche:
-    st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
+    col1, col2 = st.columns([1,4])
+    with col1:
+        if aktuell_verantwortliche in avatars:
+            st.image(avatars[aktuell_verantwortliche], width=50)
+    with col2:
+        st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
 else:
     st.warning("⚠️ Noch keine Wochenverantwortliche zugewiesen.")
 
