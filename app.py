@@ -171,13 +171,14 @@ if aktuell_verantwortliche:
     avatar_path = avatars.get(aktuell_verantwortliche)
     if avatar_path:
         # Eine Zeile mit: "Titel | Avatar mit Namen darunter"
-        col1, col2 = st.columns([3, 1])
+        col1, col2,col3 = st.columns([3, 1,1])
 
         with col1:
             st.markdown(f"### Wochenverantwortliche KW {week}:")
 
         with col2:
             st.image(avatar_path, width=80)
+        with col3:
             st.markdown(f"<div style='text-align: center; font-weight: bold;'>{aktuell_verantwortliche}</div>", unsafe_allow_html=True)
     else:
         st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
