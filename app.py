@@ -5,6 +5,8 @@ from github import Github
 from datetime import date, timedelta
 import math
 from babel.dates import format_date
+from github.GithubException import GithubException
+
 
 #Repo-Infos
 GITHUB_USER="DST81"
