@@ -167,16 +167,16 @@ current_week_days = [monday + timedelta(days=i) for i in range(7)]
 # Extrahiere Wochenverantwortung oder leere initialisieren
 aktuell_verantwortliche = wochenverantwortung.get(kw_key, None)
 
-st.markdown(f"## 👩‍💼 Wochenverantwortliche KW {week}")
+st.markdown(f"## Wochenverantwortliche KW {week}")
 
 # Anzeige der aktuellen Verantwortlichen
 if aktuell_verantwortliche:
     col1, col2 = st.columns([1,4])
     with col1:
+        st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
+    with col2:
         if aktuell_verantwortliche in avatars:
             st.image(avatars[aktuell_verantwortliche], width=50)
-    with col2:
-        st.success(f"🧑‍💼 Aktuell zuständig: **{aktuell_verantwortliche}**")
 else:
     st.warning("⚠️ Noch keine Wochenverantwortliche zugewiesen.")
 
