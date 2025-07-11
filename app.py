@@ -171,7 +171,7 @@ if aktuell_verantwortliche:
     avatar_path = avatars.get(aktuell_verantwortliche)
     if avatar_path:
         # Eine Zeile mit: "Titel | Avatar mit Namen darunter"
-        col1, col2 = st.columns([1, 1])
+        col1, col2 = st.columns([3, 1])
 
         with col1:
             st.markdown(f"### Wochenverantwortliche KW {week}:")
