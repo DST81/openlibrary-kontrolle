@@ -82,7 +82,7 @@ planung = raw_data["planung"]
 
 st.title('Arbeitsplanung - Termine')
 
-start_date=(2025, 8, 11)
+start_date= date(2025, 8, 11)
 days =[start_date + timedelta(days=i) for i in range(7)]
 
 cols=st.columns(7)
