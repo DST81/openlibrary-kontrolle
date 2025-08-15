@@ -135,6 +135,7 @@ for tag in days:
             max_avatars = max(max_avatars, len(slot_personen))
 #Höhe pro Slot: Grundhöhe + platz für Avatare
 slot_height = 60+ max_avatars * 40
+
 #Zweite Reihe: Unterteilung in Morgen, Nachmittag und Abend mit Avatare + Namen
 cols=st.columns(7)
 for col, tag in zip(cols,days):
