@@ -423,6 +423,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": "19:00 Uhr Teamsitzung"
+    },
+    "2025-09-15": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": [
+          "Daniela"
+        ]
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
