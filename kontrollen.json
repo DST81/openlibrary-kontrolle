@@ -199,7 +199,9 @@
     "2025-09-23": {
       "oeffnungszeiten": {
         "Morgen": [],
-        "Nachmittag": []
+        "Nachmittag": [
+          "Daniela"
+        ]
       },
       "klassenbesuch": null,
       "bemerkung": "19:00 Uhr Teamsitzung"
