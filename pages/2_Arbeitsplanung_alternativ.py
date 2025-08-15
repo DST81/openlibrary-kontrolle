@@ -85,7 +85,7 @@ st.title('Arbeitsplanung - Termine')
 
 if "start_date" not in st.session_state:
     #aktueller Wochenanfang(Montag)
-    today=data.today()
+    today=date.today()
     st.session_state.start_date=today-timedelat(days=today.weekday())
 col1, col2, col3 = st.columns([1,2,1])
 with col1:
