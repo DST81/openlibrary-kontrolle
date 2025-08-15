@@ -87,6 +87,7 @@ if "start_date" not in st.session_state:
     #aktueller Wochenanfang(Montag)
     today=date.today()
     st.session_state.start_date=today-timedelta(days=today.weekday())
+
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2: 
@@ -98,16 +99,18 @@ with col2:
     if selected_date != st.session_state.start_date:
         st.session_state.start_date=selected_date - timedelta(days=selected_date.weekday())
 
-        
-start_date= st.session_state.start_date
-days =[start_date + timedelta(days=i) for i in range(7)]
-wochentage = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
-
-if "start_date" not in st.session_state:
+ if "start_date" not in st.session_state:
     #aktueller Wochenanfang(Montag)
     today=data.today()
     st.session_state.start_date=today-timedelat(days=today.weekday())
-#Erste Reihe: Wochentage + Datum
+     
+start_date= st.session_state.start_date
+days =[start_date + timedelta(days=i) for i in range(7)]
+wochentage = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
+zeiten=['Morgen','Nachmittag','Abend']
+
+
+# Erste Reihe: Wochentage + Datum
 cols=st.columns(7)
 for col, tag, wd in zip(cols,days, wochentage):
     col.markdown(
@@ -116,19 +119,24 @@ for col, tag, wd in zip(cols,days, wochentage):
         f"</div>", unsafe_allow_html=True
     )
 
-#Zweite Reihe: Avatare + Namen
+#Zweite Reihe: Unterteilung in Morgen, Nachmittag und Abend mit Avatare + Namen
 cols=st.columns(7)
 for col, tag in zip(cols,days):
     tag_str = tag.isoformat()
-    oeffnungszeiten = planung.get(tag_str, {}).get('oeffnungszeiten')  # kann None sein
-    if oeffnungszeiten: 
-        avatar_cols=col.columns(len(oeffnungszeiten))
-        for ac, p in zip(avatar_cols,oeffnungszeiten):
-            if p in avatars:
-                ac.image(avatars[p],width=40)
-                ac.caption(p)
-    else:
-        col.markdown("<div style='border:1px solid #ddd; padding:5px; min-height:60px;'></div>", unsafe_allow_html=True)
+    with col:
+        for zeit in zeiten:
+            st.markdown(
+                f"<div style='border:1px solid #ddd; padding:5px; min-height:60px; text-align:center;'>"
+                f"<b>{zeit}</b><br>", unsafe_allow_html=True
+            ) 
+        oeffnungszeiten = planung.get(tag_str, {}).get('oeffnungszeiten')  # kann None sein
+        if oeffnungszeiten: 
+            avatar_cols=col.columns(len(oeffnungszeiten))
+            for ac, p in zip(avatar_cols,oeffnungszeiten):
+                if p in avatars:
+                    ac.image(avatars[p],width=40)
+                    ac.caption(p)
+          markdown("</div>", unsafe_allow_html=True)
 
 #Dritte Reihe: Klassenbesuche + Bemerkungen
 cols=st.columns(7)
