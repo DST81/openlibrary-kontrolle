@@ -139,9 +139,11 @@ slot_height = 60+ max_avatars * 40
 #Zweite Reihe: Unterteilung in Morgen, Nachmittag und Abend mit Avatare + Namen
 
 always_active_slots = {
-    "Thursday": ["Morgen"],   # Donnerstag-Morgen immer aktiv
-    "Saturday": ["Morgen"],   # Samstag-Morgen immer aktiv
-    # weitere Wochentage + Zeiten nach Bedarf
+    "Tuesday": ["Nachmittag"],    # Dienstag Nachmittag
+    "Wednesday": ["Morgen"],      # Mittwoch Morgen
+    "Thursday": ["Morgen", "Nachmittag"],  # Donnerstag Morgen + Nachmittag
+    "Friday": ["Morgen"],         # Freitag Morgen
+    "Saturday": ["Morgen"]        # Samstag Morge
 }
 
 cols=st.columns(7)
