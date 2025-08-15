@@ -72,10 +72,7 @@ avatars = {
     "Susanne": "avatars/susanne.png"
 }
 
-datum = st.date_input("Datum", date.today())
-oeffnungszeiten = st.multiselect("Wer übernimmt die Öffnungszeit?", list(avatars.keys()))
-klassenbesuch = st.text_input("Klassenbesuch (optional)")
-bemerkung = st.text_area("Bemerkung (optional)")
+
 raw_data,sha  = load_kontrollen()
 raw_data = migrate_kontrollen_if_needed(raw_data)
 kontrollen = raw_data['kontrollen']
@@ -128,6 +125,11 @@ for col, tag in zip(cols,days):
     st.markdown("</div>", unsafe_allow_html=True)
 # === Neues Event hinzufügen ===
 st.subheader("📌 Termin hinzufügen")
+
+datum = st.date_input("Datum", date.today())
+oeffnungszeiten = st.multiselect("Wer übernimmt die Öffnungszeit?", list(avatars.keys()))
+klassenbesuch = st.text_input("Klassenbesuch (optional)")
+bemerkung = st.text_area("Bemerkung (optional)")
 
 events=[]
 for tag, details in planung.items():
