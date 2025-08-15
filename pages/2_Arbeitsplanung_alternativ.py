@@ -127,7 +127,8 @@ for col, tag in zip(cols,days):
         for zeit in zeiten:
             st.markdown(
                 f"<div style='border:1px solid #ddd; padding:5px; min-height:60px; text-align:center;'>"
-                f"<b>{zeit}</b><br>", unsafe_allow_html=True
+                f"<b>{zeit}</b><br>", 
+                unsafe_allow_html=True
             ) 
         oeffnungszeiten = planung.get(tag_str, {}).get('oeffnungszeiten')  # kann None sein
         if oeffnungszeiten: 
