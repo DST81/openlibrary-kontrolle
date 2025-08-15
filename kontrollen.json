@@ -92,5 +92,15 @@
     "2025-W30": "Debora",
     "2025-W31": "Aniko",
     "2025-W32": "Susanne"
+  },
+  "planung": {
+    "2025-08-15": {
+      "oeffnungszeiten": [
+        "Daniela",
+        "Sarah"
+      ],
+      "klassenbesuch": null,
+      "bemerkung": null
+    }
   }
 }
