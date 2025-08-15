@@ -174,34 +174,25 @@ if st.session_state.selected_day and st.session_state.selected_zeit:
 st.subheader("📌 Termin hinzufügen")
 
 datum = st.date_input("Datum", date.today())
-oeffnungszeiten = st.multiselect("Wer übernimmt die Öffnungszeit?", list(avatars.keys()))
+zeit_slot=st.selectbox('Zeit',zeiten)
+oeffnungszeiten = st.multiselect("Wer übernimmt die Ausleihe?", list(avatars.keys()))
 klassenbesuch = st.text_input("Klassenbesuch (optional)")
 bemerkung = st.text_area("Bemerkung (optional)")
-
-events=[]
-for tag, details in planung.items():
-  if 'oeffnungszeiten' in details and details['oeffnungszeiten']:
-    events.append({
-      'title':', '.join(details['oeffnungszeiten']),
-      'start':tag
-    })
-    if "klassenbesuch" in details and details["klassenbesuch"]:
-      events.append({
-          "title": "Klassenbesuch: " + details["klassenbesuch"],
-          "start": tag
-      })
-  if "bemerkung" in details and details["bemerkung"]:
-      events.append({
-          "title": "Bemerkung: " + details["bemerkung"],
-          "start": tag
-      })  
+ 
       
 if st.button("💾 Speichern"):
-    planung[str(datum)] = {
-        "oeffnungszeiten": oeffnungszeiten if oeffnungszeiten else None,
-        "klassenbesuch": klassenbesuch if klassenbesuch else None,
-        "bemerkung": bemerkung if bemerkung else None
-    }
+    tag_str = str(datum)
+    if tag_str not in planung:
+        planung[tag_str] = {
+            "oeffnungszeiten": {z: [] for z in zeiten},
+            "klassenbesuch": None,
+            "bemerkung": None
+        }
+     # Personen im gewählten Zeitslot eintragen
+    planung[tag_str]["oeffnungszeiten"][zeit_slot] = oeffnungszeiten
+    planung[tag_str]["klassenbesuch"] = klassenbesuch if klassenbesuch else None
+    planung[tag_str]["bemerkung"] = bemerkung if bemerkung else None
+   
     sha = save_kontrollen({
         "kontrollen": kontrollen,
         "wochenverantwortung": wochenverantwortung,
