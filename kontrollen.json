@@ -152,6 +152,18 @@
       },
       "klassenbesuch": "P4a L. Lustenberger (14:15-15:00)",
       "bemerkung": null
+    },
+    "2025-08-23": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Susanne",
+          "Daniela"
+        ],
+        "Nachmittag": [],
+        "Abend": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": "10:00 - 12:00 Erzählcafé"
     }
   }
 }
