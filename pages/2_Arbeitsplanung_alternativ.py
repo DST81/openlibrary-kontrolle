@@ -126,7 +126,7 @@ cols=st.columns(7)
 for col, tag in zip(cols,days):
     tag_str = tag.isoformat()
     with col:
-        oeffnungszeiten= planung.get(tag_str, {}.get('oeffnungszeiten', [])
+        oeffnungszeiten= planung.get(tag_str, {}).get('oeffnungszeiten', [])
         for zeit in zeiten:
             # Klickbare Zelle
             if st.button(f"{zeit} hinzufügen", key=f"{tag}_{zeit}"):
