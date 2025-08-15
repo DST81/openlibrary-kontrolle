@@ -72,7 +72,7 @@ avatars = {
     "Susanne": "avatars/susanne.png"
 }
 
-st.set_page_config(page_title='Arbeitsplanung & Termine', page_icon='📅, layout='wide')
+st.set_page_config(page_title='Arbeitsplanung & Termine', page_icon='📅', layout='wide')
 
 raw_data,sha  = load_kontrollen()
 raw_data = migrate_kontrollen_if_needed(raw_data)
