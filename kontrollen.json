@@ -256,6 +256,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-08-27": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Aniko"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
