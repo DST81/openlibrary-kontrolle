@@ -5,14 +5,15 @@ from datetime import date, timedelta
 from streamlit_calendar import calendar
 from github.GithubException import GithubException
 
-# GitHub-Zugang
-GITHUB_TOKEN = "dein_personal_access_token"  # oder aus Streamlit secrets: st.secrets["github_token"]
-REPO_NAME = "dein_user/dein_repo"
-BRANCH = "main"
+#Repo-Infos
+GITHUB_USER="DST81"
+REPO_NAME="openlibrary-kontrolle"
+BRANCH= "main"
 FILE_PATH = "kontrollen.json"
 
-g = Github(GITHUB_TOKEN)
-repo = g.get_repo(REPO_NAME)
+token=st.secrets['github_token']
+g=Github(token)
+repo= g.get_user(GITHUB_USER).get_repo(REPO_NAME)
 
 # === Hilfsfunktionen ===
 def load_kontrollen():
