@@ -72,6 +72,15 @@ avatars = {
     "Susanne": "avatars/susanne.png"
 }
 
+datum = st.date_input("Datum", date.today())
+oeffnungszeiten = st.multiselect("Wer übernimmt die Öffnungszeit?", list(avatars.keys()))
+klassenbesuch = st.text_input("Klassenbesuch (optional)")
+bemerkung = st.text_area("Bemerkung (optional)")
+raw_data,sha  = load_kontrollen()
+raw_data = migrate_kontrollen_if_needed(raw_data)
+kontrollen = raw_data['kontrollen']
+wochenverantwortung = raw_data["wochenverantwortung"]
+planung = raw_data["planung"]
 st.set_page_config(page_title='Arbeitsplanung & Termine version 2', page_icon='📅', layout='wide')
             
 st.title('Arbeitsplanung - Termine')
@@ -102,15 +111,7 @@ for col, tag in zip(cols,days):
 
 # === Neues Event hinzufügen ===
 st.subheader("📌 Termin hinzufügen")
-datum = st.date_input("Datum", date.today())
-oeffnungszeiten = st.multiselect("Wer übernimmt die Öffnungszeit?", list(avatars.keys()))
-klassenbesuch = st.text_input("Klassenbesuch (optional)")
-bemerkung = st.text_area("Bemerkung (optional)")
-raw_data,sha  = load_kontrollen()
-raw_data = migrate_kontrollen_if_needed(raw_data)
-kontrollen = raw_data['kontrollen']
-wochenverantwortung = raw_data["wochenverantwortung"]
-planung = raw_data["planung"]
+
 events=[]
 for tag, details in planung.items():
   if 'oeffnungszeiten' in details and details['oeffnungszeiten']:
