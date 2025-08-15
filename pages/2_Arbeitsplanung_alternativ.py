@@ -103,7 +103,7 @@ for col, tag in zip(cols,days):
     oeffnungszeiten = planung.get(tag_str, {}).get('oeffnungszeiten')  # kann None sein
     if oeffnungszeiten: 
         avatar_cols=col.columns(len(oeffnungszeiten))
-        for ac, p in in zip(avatar_cols,oeffnungszeiten):
+        for ac, p in zip(avatar_cols,oeffnungszeiten):
             if p in avatars:
                 ac.image(avatars[p],width=40)
                 ac.caption(p)
