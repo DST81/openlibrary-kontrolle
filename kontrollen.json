@@ -177,6 +177,16 @@
       },
       "klassenbesuch": " P4a L. Lustenberger (14:15-15:00)",
       "bemerkung": null
+    },
+    "2025-08-29": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Sarah"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": "9:00 Verslimorgen"
     }
   }
 }
