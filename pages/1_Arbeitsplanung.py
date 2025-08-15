@@ -72,7 +72,7 @@ avatars = {
     "Susanne": "avatars/susanne.png"
 }
 
-st.set_page_config(page_title='Arbeitsplanung & Termine', page_icon='📅')
+st.set_page_config(page_title='Arbeitsplanung & Termine', page_icon='📅, layout='wide')
 
 raw_data,sha  = load_kontrollen()
 raw_data = migrate_kontrollen_if_needed(raw_data)
@@ -83,8 +83,10 @@ planung = raw_data["planung"]
 events=[]
 for tag, details in planung.items():
   if 'oeffnungszeiten' in details and details['oeffnungszeiten']:
+    avatar_html=' '.join([f'<img src="{avatars[p]}" width="30" height="30">' 
+                                for p in details["oeffnungszeiten"] if p in avatars])
     events.append({
-      'title':'👤 ' +', '.join(details['oeffnungszeiten']),
+      'title':avatar_html,
       'start':tag
     })
     if "klassenbesuch" in details and details["klassenbesuch"]:
@@ -99,7 +101,7 @@ for tag, details in planung.items():
       })  
 
 calendar_options = {
-    "initialView": "dayGridMonth",
+    "initialView": "timeGridWeek",
     "locale": "de",
     "events": events
 }
