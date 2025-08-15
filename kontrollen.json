@@ -117,6 +117,17 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-08-13": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Janine"
+        ],
+        "Nachmittag": [],
+        "Abend": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
