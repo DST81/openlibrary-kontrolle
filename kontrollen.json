@@ -95,7 +95,9 @@
   },
   "planung": {
     "2025-08-15": {
-      "oeffnungszeiten": null,
+      "oeffnungszeiten": [
+        "Aniko"
+      ],
       "klassenbesuch": null,
       "bemerkung": null
     },
