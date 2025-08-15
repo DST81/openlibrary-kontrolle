@@ -145,8 +145,9 @@ for col, tag in zip(cols,days):
                 for p in slot_personen:
                     if p in avatars_b64:
                         col_html += (
-                            f"<img src='data:image/png;base64,{avatars_b64[p]}'"
-                            f"width='30' style='border-radius:50%; margin:2px;'>"
+                            f"<div style='display:inline-block; margin:4px;'>"
+                            f"<img src='data:image/png;base64,{avatars_b64[p]}' "
+                            f"width='30' style='border-radius:50%; display:block; margin:auto;'>"
                             f"<small>{p}</small>"
                             f"</div>"
                         )
