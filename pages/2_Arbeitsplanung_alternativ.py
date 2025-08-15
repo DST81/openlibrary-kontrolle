@@ -91,9 +91,13 @@ col1, col2, col3 = st.columns([1,2,1])
 with col1:
     if st.button("⬅ Vorwoche"):
         st.session_state.start_date -=timedelta(days=7)
+    if st.button("⬅ Letzter Monat"):
+        st.session_state.start_date -=timedelta(days=30)
 with col3:
-    if st.button("➡ Nächste Woche"):
+    if st.button("Nächste Woche ➡"):
         st.session_state.start_date +=timedelta(days=7)
+    if st.button("Nächster Monat ➡"):
+        st.session_state.start_date +=timedelta(days=30)
         
 start_date= st.session_state.start_date
 days =[start_date + timedelta(days=i) for i in range(7)]
