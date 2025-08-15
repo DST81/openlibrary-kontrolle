@@ -132,7 +132,7 @@ for col, tag in zip(cols,days):
             if st.button(f"{zeit} hinzufügen", key=f"{tag}_{zeit}"):
                 st.session_state.selected_day = tag
                 st.session_state.selected_zeit = zeit
-                st.experimental_rerun()
+                st.rerun()
             # Zelle mit Avataren
             st.markdown(
                 f"<div style='border:1px solid #ddd; padding:5px; min-height:60px; text-align:center;'>"
