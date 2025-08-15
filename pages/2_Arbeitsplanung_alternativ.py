@@ -99,7 +99,7 @@ with col2:
     if selected_date != st.session_state.start_date:
         st.session_state.start_date=selected_date - timedelta(days=selected_date.weekday())
 
- if "start_date" not in st.session_state:
+if "start_date" not in st.session_state:
     #aktueller Wochenanfang(Montag)
     today=data.today()
     st.session_state.start_date=today-timedelat(days=today.weekday())
