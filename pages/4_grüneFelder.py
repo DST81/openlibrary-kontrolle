@@ -171,20 +171,30 @@ for col, tag in zip(cols, days):
             f"text-align:center; background-color:{bg_color};'>"
             f"<b>{zeit}</b><br>"
         )
-
-        # Kleine Checkbox zum Aktivieren/Deaktivieren
-        slot_needed = col.checkbox(
-            'X',
-            value=slot_needed, 
-            key=f"slot_{tag_str}_{zeit}",
-            help="Slot schliessen/öffnen"
-        )
-        st.session_state['planning_slots'][tag_str][zeit] = slot_needed
-
+        # Avatare einfügen, falls vorhanden
+        slot_personen = planung.get(tag_str, {}).get('oeffnungszeiten', {}).get(zeit, [])
+        for p in slot_personen:
+            if p in avatars_b64:
+                col_html += (
+                    f"<div style='display:inline-block; margin:2px;'>"
+                    f"<img src='data:image/png;base64,{avatars_b64[p]}' width='30' "
+                    f"style='border-radius:50%; display:block; margin:auto;'>"
+                    f"<small>{p}</small></div>"
+                )
         col_html += '</div>'
 
     # HTML in Spalte rendern
     col.markdown(col_html, unsafe_allow_html=True)
+
+    # Kleine Checkbox einklappar
+    with col.expander('Schliesstage'):
+        for zeit in zeiten:
+            default = zeit in always_active_slots.get(wochentag, [])
+            slot_needed = st.session_state['planning_slots'][tag_str].get(zeit, default)
+            slot_needed = st.checkbox(
+                zeit, value=slot_needed, key=f"slot_{tag_str}_{zeit}"
+            )
+            st.session_state['planning_slots'][tag_str][zeit] = slot_needed    
 
 #Dritte Reihe: Klassenbesuche + Bemerkungen
 cols=st.columns(7)
