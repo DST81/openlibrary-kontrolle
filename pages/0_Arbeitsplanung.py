@@ -86,7 +86,7 @@ kontrollen = raw_data['kontrollen']
 wochenverantwortung = raw_data["wochenverantwortung"]
 planung = raw_data["planung"]
 
-st.set_page_config(page_title='Mit grünen Feldern', page_icon='📅', layout='wide')
+st.set_page_config(page_title='Arbeitsplanung', page_icon='📅', layout='wide')
             
 st.title('Arbeitsplanung - Termine')
 
