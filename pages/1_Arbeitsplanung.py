@@ -83,10 +83,8 @@ planung = raw_data["planung"]
 events=[]
 for tag, details in planung.items():
   if 'oeffnungszeiten' in details and details['oeffnungszeiten']:
-    avatar_html=' '.join([f'<img src="{avatars[p]}" width="30" height="30">' 
-                                for p in details["oeffnungszeiten"] if p in avatars])
     events.append({
-      'title':avatar_html,
+      'title':', '.join(details['oeffnungszeiten']),
       'start':tag
     })
     if "klassenbesuch" in details and details["klassenbesuch"]:
@@ -108,6 +106,15 @@ calendar_options = {
 
 calendar(events=events, options=calendar_options)
 
+# Unter dem Kalender: Avatare der Mitarbeiter anzeigen
+st.write("Mitarbeiter Avatare für die Woche:")
+for tag, details in planung.items():
+    if 'oeffnungszeiten' in details and details['oeffnungszeiten']:
+        cols = st.columns(len(details["oeffnungszeiten"]))
+        for col, p in zip(cols, details["oeffnungszeiten"]):
+            if p in avatars:
+                col.image(avatars[p], width=50)  # Avatar-Bild anzeigen
+                
 # === Neues Event hinzufügen ===
 st.subheader("📌 Termin hinzufügen")
 datum = st.date_input("Datum", date.today())
