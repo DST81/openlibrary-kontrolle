@@ -101,6 +101,14 @@
       ],
       "klassenbesuch": "P1b",
       "bemerkung": "Kommt jede Woche um 16.00 Uhr"
+    },
+    "2025-08-19": {
+      "oeffnungszeiten": [
+        "Daniela",
+        "Janine"
+      ],
+      "klassenbesuch": "P1b",
+      "bemerkung": "Kommt jede Woche um 16.00 Uhr"
     }
   }
 }
