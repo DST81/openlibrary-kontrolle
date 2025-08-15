@@ -123,20 +123,27 @@ for col, tag, wd in zip(cols,days, wochentage):
 cols=st.columns(7)
 for col, tag in zip(cols,days):
     tag_str = tag.isoformat()
+    col_html=''
     for zeit in zeiten:
-        with col:
-            st.markdown(
-                f"<div style='border:1px solid #ccc; padding:3px; min-height:60px; text-align:center;'><b>{zeit}</b></div>",
-                unsafe_allow_html=True
-            )            
-        if tag_str in planung and "oeffnungszeiten" in planung[tag_str]:
-            slot_personen = planung[tag_str]["oeffnungszeiten"].get(zeit, [])
+        col_html+= (
+                f"<div style='border:1px solid #ccc; padding:3px; min-height:60px; text-align:center;'>"
+                f"<b>{zeit}</b><br>"    
+        )            
+
+        slot_personen = []
+        if tag_str in planung and 'oeffnungszeiten' in planung[tag_str]:
+            slot_personen = planung[tag_str]['oeffnungszeiten'].get(zeit,[])
+
             if slot_personen:
-                avatar_cols = st.columns(len(slot_personen))
-                for ac, p in zip(avatar_cols,slot_personen):
+                for p in slot_personen:
                     if p in avatars:
-                        ac.image(avatars[p],width=30)
-                        
+                        col_html += f"<img src='{avatars[p]}' width='30' style='border-radius:50%; margin:2px;'>"
+
+        # Slot schliessen
+        col_html += '</div>
+    # HTML in Spalte rendern
+    col.markdown(col_html, unsafe_allow_html=True
+
 #Dritte Reihe: Klassenbesuche + Bemerkungen
 cols=st.columns(7)
 for col, tag in zip(cols,days):
