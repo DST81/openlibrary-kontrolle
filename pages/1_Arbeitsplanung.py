@@ -64,7 +64,7 @@ avatars = {
 
 st.set_page_config(page_title='Arbeitsplanung & Termine', page_icon='📅')
 
-raw_data = load_kontrollen()[0]
+raw_data,sha = load_kontrollen()
 raw_data = migrate_kontrollen_if_needed(raw_data)
 kontrollen = raw_data['kontrollen']
 wochenverantwortung = raw_data["wochenverantwortung"]
