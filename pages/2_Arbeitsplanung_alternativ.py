@@ -87,7 +87,10 @@ if "start_date" not in st.session_state:
     #aktueller Wochenanfang(Montag)
     today=date.today()
     st.session_state.start_date=today-timedelta(days=today.weekday())
-
+if "selected_day" not in st.session_state:
+    st.session_state.selected_day=None
+    st.session_state.selected_zeit=None
+    
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2: 
@@ -115,8 +118,7 @@ cols=st.columns(7)
 for col, tag, wd in zip(cols,days, wochentage):
     col.markdown(
         f"<div style='border:1px solid #ddd; padding:5px; text-align:center; font-weight:bold;'>"
-        f"{wd} {tag.day}.{tag.month}"
-        f"</div>", unsafe_allow_html=True
+        f"{wd} {tag.day}.{tag.month}</div>", unsafe_allow_html=True
     )
 
 #Zweite Reihe: Unterteilung in Morgen, Nachmittag und Abend mit Avatare + Namen
@@ -124,7 +126,14 @@ cols=st.columns(7)
 for col, tag in zip(cols,days):
     tag_str = tag.isoformat()
     with col:
+        oeffnungszeiten= planung.get(tag_str, {}.get('oeffnungszeiten', [])
         for zeit in zeiten:
+            # Klickbare Zelle
+            if st.button(f"{zeit} hinzufügen", key=f"{tag}_{zeit}"):
+                st.session_state.selected_day = tag
+                st.session_state.selected_zeit = zeit
+                st.experimental_rerun()
+            # Zelle mit Avataren
             st.markdown(
                 f"<div style='border:1px solid #ddd; padding:5px; min-height:60px; text-align:center;'>"
                 f"<b>{zeit}</b><br>", 
@@ -153,8 +162,23 @@ for col, tag in zip(cols,days):
         f"<div style='border:1px solid #ddd; padding:5px; min-height:40px; text-align:left;'>{text}</div>",
         unsafe_allow_html=True
     )
-    
-# === Neues Event hinzufügen ===
+ # === Neues Event hinzufügen (Formular) ===
+if st.session_state.selected_day and st.session_state.selected_zeit:
+    st.markdown("---")
+    st.subheader(f"📌 Neues Event für {st.session_state.selected_day} {st.session_state.selected_zeit}")
+    new_event = st.text_input("Eventbeschreibung")
+    if st.button("Hinzufügen"):
+        tag_str = st.session_state.selected_day.isoformat()
+        if tag_str not in planung:
+            planung[tag_str] = {}
+        if "oeffnungszeiten" not in planung[tag_str] or planung[tag_str]["oeffnungszeiten"] is None:
+            planung[tag_str]["oeffnungszeiten"] = []
+        planung[tag_str]["oeffnungszeiten"].append(new_event)
+        st.success("Event hinzugefügt ✅")
+        st.session_state.selected_day = None
+        st.session_state.selected_zeit = None
+        st.experimental_rerun()   
+# === Neues Event hinzufügen (manuell) ===
 st.subheader("📌 Termin hinzufügen")
 
 datum = st.date_input("Datum", date.today())
