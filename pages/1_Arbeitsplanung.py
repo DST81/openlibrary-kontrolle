@@ -5,6 +5,15 @@ from datetime import date, timedelta
 from streamlit_calendar import calendar
 from github.GithubException import GithubException
 
+# GitHub-Zugang
+GITHUB_TOKEN = "dein_personal_access_token"  # oder aus Streamlit secrets: st.secrets["github_token"]
+REPO_NAME = "dein_user/dein_repo"
+BRANCH = "main"
+FILE_PATH = "kontrollen.json"
+
+g = Github(GITHUB_TOKEN)
+repo = g.get_repo(REPO_NAME)
+
 # === Hilfsfunktionen ===
 def load_kontrollen():
     try:
@@ -64,7 +73,7 @@ avatars = {
 
 st.set_page_config(page_title='Arbeitsplanung & Termine', page_icon='📅')
 
-raw_data,sha = load_kontrollen()
+raw_data = load_kontrollen()[0]
 raw_data = migrate_kontrollen_if_needed(raw_data)
 kontrollen = raw_data['kontrollen']
 wochenverantwortung = raw_data["wochenverantwortung"]
