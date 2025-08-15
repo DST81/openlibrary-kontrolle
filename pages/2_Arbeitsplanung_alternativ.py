@@ -142,7 +142,7 @@ for col, tag in zip(cols,days):
         # Slot schliessen
         col_html += '</div>'
     # HTML in Spalte rendern
-    col.markdown(col_html, unsafe_allow_html=True
+    col.markdown(col_html, unsafe_allow_html=True)
 
 #Dritte Reihe: Klassenbesuche + Bemerkungen
 cols=st.columns(7)
