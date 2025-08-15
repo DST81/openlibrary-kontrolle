@@ -115,6 +115,14 @@
       ],
       "klassenbesuch": "P1b",
       "bemerkung": "14.00 Uhr Gschichteziit"
+    },
+    "2025-08-12": {
+      "oeffnungszeiten": [
+        "Aniko",
+        "Daniela"
+      ],
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
