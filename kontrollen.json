@@ -324,7 +324,10 @@
     },
     "2025-09-06": {
       "oeffnungszeiten": {
-        "Morgen": [],
+        "Morgen": [
+          "Janine",
+          "Susanne"
+        ],
         "Nachmittag": [
           "Janine",
           "Susanne"
