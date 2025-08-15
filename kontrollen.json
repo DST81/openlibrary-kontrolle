@@ -134,7 +134,10 @@
     "2025-08-12": {
       "oeffnungszeiten": {
         "Morgen": [],
-        "Nachmittag": [],
+        "Nachmittag": [
+          "Daniela",
+          "Aniko"
+        ],
         "Abend": [
           "Daniela",
           "Aniko"
