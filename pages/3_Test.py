@@ -130,10 +130,19 @@ for col, tag, wd in zip(cols,days, wochentage):
 cols=st.columns(7)
 for col, tag in zip(cols,days):
     tag_str = tag.isoformat()
+
+    max_avatars_in_column =0
+    if tag_str in planung and 'oeffnungszeiten' in planung[tag_str]:
+        for zeit in zeiten:
+            slot_personen = planung[tag_str]["oeffnungszeiten"].get(zeit, [])
+            max_avatars_in_column = max(max_avatars_in_column, len(slot_personen))
+    #Höhe pro Slot: Grundhöhe + platz für Avatare
+    slot_height = 60+ max_avatars_in_column * 40
+    
     col_html=''
     for zeit in zeiten:
         col_html+= (
-                f"<div style='border:1px solid #ccc; padding:3px; min-height:60px; text-align:center;'>"
+                f"<div style='border:1px solid #ccc; padding:3px; min-height:{slot_heigth}px; text-align:center;'>"
                 f"<b>{zeit}</b><br>"    
         )            
 
