@@ -187,7 +187,7 @@ for col, tag in zip(cols, days):
     col.markdown(col_html, unsafe_allow_html=True)
 
     # Kleine Checkbox einklappar
-    with col.expander('Schliesstage'):
+    with col.expander('Geänderte Ausleihzeit'):
         for zeit in zeiten:
             default = zeit in always_active_slots.get(wochentag, [])
             slot_needed = st.session_state['planning_slots'][tag_str].get(zeit, default)
