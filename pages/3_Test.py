@@ -184,7 +184,7 @@ for col, tag in zip(cols,days):
 # === Neues Event hinzufügen (manuell) ===
 st.subheader("📌 Termin hinzufügen")
 
-datum = st.date_input("Datum", value=st.session_state.selected_day or date.today())
+datum = st.date_input("Datum", value=st.session_state.start_day or date.today())
 
 # Standardwerte setzen, falls bereits geplant
 existing = planung.get(datum.isoformat(), {})
