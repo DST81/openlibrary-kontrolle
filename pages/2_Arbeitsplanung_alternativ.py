@@ -140,7 +140,7 @@ for col, tag in zip(cols,days):
                         col_html += f"<img src='{avatars[p]}' width='30' style='border-radius:50%; margin:2px;'>"
 
         # Slot schliessen
-        col_html += '</div>
+        col_html += '</div>'
     # HTML in Spalte rendern
     col.markdown(col_html, unsafe_allow_html=True
 
