@@ -127,18 +127,18 @@ for col, tag in zip(cols,days):
     for zeit in zeiten:
         col_content += f"<div style='border:1px solid #ccc; padding:3px; min-height:60px; text-align:center;'>"
         col_content += f"<b>{zeit}</b><br>"
+        
+        slot_personen = []
+        if tag_str in planung and "oeffnungszeiten" in planung[tag_str]:
+            slot_personen = planung[tag_str]["oeffnungszeiten"].get(zeit, [])
 
-    # Avatare im passenden Zeitblock anzeigen
-    oeffnungszeiten = planung.get(tag_str, {}).get('oeffnungszeiten', [])
-    if oeffnungszeiten:
-        avatar_html = ""
-        for p in oeffnungszeiten:
-            if p in avatars:
-                avatar_html += f"<img src='{avatars[p]}' width='30' style='border-radius:50%; margin:2px;'>"
-        col_content += avatar_html
+        if slot_personen:
+            for p in slot_personen:
+                if p in avatars:
+                    col_content += f"<img src='{avatars[p]}' width='30' style='border-radius:50%; margin:2px;'>"
 
-    col_content += "</div>"
-col.markdown(col_content, unsafe_allow_html=True)
+        col_content += "</div>"
+    col.markdown(col_content, unsafe_allow_html=True)
 
 #Dritte Reihe: Klassenbesuche + Bemerkungen
 cols=st.columns(7)
