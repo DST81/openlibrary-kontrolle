@@ -97,7 +97,7 @@ with col2:
     selected_date= st.date_input(
         "Springe zu Datum", 
         value=st.session_state.start_date,
-        key='date_jump_input
+        key='date_jump_input'
     )
     if selected_date != st.session_state.start_date:
         st.session_state.start_date=selected_date - timedelta(days=selected_date.weekday())
