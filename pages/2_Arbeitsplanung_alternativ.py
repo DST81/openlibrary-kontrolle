@@ -97,23 +97,18 @@ for col, tag, wd in zip(cols,days, wochentage):
     )
 
 #Zweite Reihe: Avatare + Namen
-cols=st.columns(7)        
-tag_str = tag.isoformat()
-oeffnungszeiten = planung.get(tag_str, {}).get('oeffnungszeiten')  # kann None sein
-if oeffnungszeiten: 
-    avatar_html = ""
-    for p in oeffnungszeiten:
-        if p in avatars:
-            avatar_html += (
-                f"<div style='display:inline-block; text-align:center; margin:2px;'>"
-                f"<img src='{avatars[p]}' width='40' height='40'><br>{p}</div>"
-            )
-    col.markdown(
-        f"<div style='border:1px solid #ddd; padding:5px; min-height:60px;'>"
-        f"{avatars_html}</div>", unsafe_allow_html=True
-    )
-else:
-    col.markdown("<div style='border:1px solid #ddd; padding:5px; min-height:60px;'></div>", unsafe_allow_html=True)
+cols=st.columns(7)
+for col, tag in zip(cols,days):
+    tag_str = tag.isoformat()
+    oeffnungszeiten = planung.get(tag_str, {}).get('oeffnungszeiten')  # kann None sein
+    if oeffnungszeiten: 
+        avatar_cols=col.columns(len(oeffnungszeiten))
+        for ac, p in in zip(avatar_cols,oeffnungszeiten):
+            if p in avatars:
+                ac.image(avatars[p],width=40)
+                ac.caption(p)
+    else:
+        col.markdown("<div style='border:1px solid #ddd; padding:5px; min-height:60px;'></div>", unsafe_allow_html=True)
 
 #Dritte Reihe: Klassenbesuche + Bemerkungen
 cols=st.columns(7)
