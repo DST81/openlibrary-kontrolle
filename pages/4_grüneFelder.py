@@ -137,6 +137,13 @@ for tag in days:
 slot_height = 60+ max_avatars * 40
 
 #Zweite Reihe: Unterteilung in Morgen, Nachmittag und Abend mit Avatare + Namen
+
+always_active_slots = {
+    "Thursday": ["Morgen"],   # Donnerstag-Morgen immer aktiv
+    "Saturday": ["Morgen"],   # Samstag-Morgen immer aktiv
+    # weitere Wochentage + Zeiten nach Bedarf
+}
+
 cols=st.columns(7)
 # Sicherstellen, dass session_state für Slots existiert
 if 'planning_slots' not in st.session_state:
@@ -144,13 +151,15 @@ if 'planning_slots' not in st.session_state:
 
 for col, tag in zip(cols, days):
     tag_str = tag.isoformat()
+    wochentag= tag.strftime("%A")
     if tag_str not in st.session_state['planning_slots']:
         st.session_state['planning_slots'][tag_str] = {}
 
     col_html = ''
     for zeit in zeiten:
         # Status des Slots (aktiv oder nicht)
-        slot_needed = st.session_state['planning_slots'][tag_str].get(zeit, False)
+        default= zeit in always_active_slots.get(wochentag, [])
+        slot_needed = st.session_state['planning_slots'][tag_str].get(zeit, default)
 
         # Checkbox zum Aktivieren/Deaktivieren
         slot_needed = col.checkbox(f"{zeit}", value=slot_needed, key=f"slot_{tag_str}_{zeit}")
@@ -165,19 +174,6 @@ for col, tag in zip(cols, days):
             f"<b>{zeit}</b><br>"
         )
 
-        # Avatare nur anzeigen, wenn Slot aktiv
-        if slot_needed:
-            slot_personen = planung.get(tag_str, {}).get('oeffnungszeiten', {}).get(zeit, [])
-            if slot_personen:
-                for p in slot_personen:
-                    if p in avatars_b64:
-                        col_html += (
-                            f"<div style='display:inline-block; margin:4px;'>"
-                            f"<img src='data:image/png;base64,{avatars_b64[p]}' "
-                            f"width='30' style='border-radius:50%; display:block; margin:auto;'>"
-                            f"<small>{p}</small>"
-                            f"</div>"
-                        )
 
         col_html += '</div>'
 
