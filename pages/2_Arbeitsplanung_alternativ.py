@@ -81,7 +81,7 @@ days =[start_date + timedelta(days=i) for i in range(7)]
 
 cols=st.columns(7)
 for col, tag in zip(cols,days):
-    col.markdown(f"**{tag.strftime('%a %d.%b')}**)
+    col.markdown(f"**{tag.strftime('%a %d.%b')}**")
   tag_str = tag.isoformat()
   if tag_str in planung and 'oeffnungszeiten' in planung[tag_str]:
     for p in planung[tag_str]['oeffnungszeiten']:
