@@ -90,25 +90,42 @@ days =[start_date + timedelta(days=i) for i in range(7)]
 
 cols=st.columns(7)
 for col, tag in zip(cols,days):
+    # Rahmen um den Tag
+    with col:
+        st.markdown(
+            f"""
+            <div style="
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 10px;
+                text-align: center;
+                min-height: 150px;">
+                <strong>{tag.strftime('%a %d.%b')}</strong><br>
+            """, unsafe_allow_html=True)
+        
     col.markdown(f"**{tag.strftime('%a %d.%b')}**")
     tag_str = tag.isoformat()
     if tag_str in planung and 'oeffnungszeiten' in planung[tag_str]:
+        avatar_html = ""
         for p in planung[tag_str]['oeffnungszeiten']:
             if p in avatars:
-                col.image(avatars[p],width=40)
-cols=st.columns(7)
+                avatar_html += f'<img src="{avatars[p]}" width="40" style="margin:2px;"><br><small>{p}</small> '
+        st.markdown(avatar_html, unsafe_allow_html=True)
+        """for p in planung[tag_str]['oeffnungszeiten']:
+            if p in avatars:
+                col.image(avatars[p],width=40)"""
 
-#zweite Zeile für Klassenbesuche/Bemerkungen
-for col, tag in zip(cols,days):
-  tag_str=tag.isoformat()
-  if tag_str in planung:
-    details=planung[tag_str]
-    if 'klassenbesuch' in details:
-      col.write(f"📝 {details['klassenbesuch']}")
-    if 'bemerkung' in details:
-      col.write(f"💡 {details['bemerkung']}")
+
+    # Klassenbesuch / Bemerkung darunter
+    if tag_str in planung:
+        details = planung[tag_str]
+        if 'klassenbesuch' in details:
+            st.markdown(f"<br>📝 {details['klassenbesuch']}", unsafe_allow_html=True)
+        if 'bemerkung' in details:
+            st.markdown(f"<br>💡 {details['bemerkung']}", unsafe_allow_html=True)
+
  
-
+    st.markdown("</div>", unsafe_allow_html=True)
 # === Neues Event hinzufügen ===
 st.subheader("📌 Termin hinzufügen")
 
