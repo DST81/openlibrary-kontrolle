@@ -157,17 +157,13 @@
       "oeffnungszeiten": {
         "Morgen": [
           "Susanne",
-          "Daniela",
-          "Sarah",
-          "Debora",
-          "Aniko",
-          "Janine"
+          "Daniela"
         ],
         "Nachmittag": [],
         "Abend": []
       },
       "klassenbesuch": null,
-      "bemerkung": null
+      "bemerkung": "10:00-12:00 Erzählcafé"
     }
   }
 }
