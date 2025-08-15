@@ -83,10 +83,26 @@ st.set_page_config(page_title='Arbeitsplanung & Termine version 2', page_icon='�
             
 st.title('Arbeitsplanung - Termine')
 
-start_date= date(2025, 8, 11)
+if "start_date" not in st.session_state:
+    #aktueller Wochenanfang(Montag)
+    today=data.today()
+    st.session_state.start_date=today-timedelat(days=today.weekday())
+col1, col2, col3 = st.columns([1,2,1])
+with col1:
+    if st.button("⬅ Vorwoche"):
+        st.session_state.start_date -=timedelta(days=7)
+with col3:
+    if st.button("➡ Nächste Woche"):
+        st.session_state.start_date +=timedelta(days=7)
+        
+start_date= st.session_state.start_date
 days =[start_date + timedelta(days=i) for i in range(7)]
 wochentage = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
 
+if "start_date" not in st.session_state:
+    #aktueller Wochenanfang(Montag)
+    today=data.today()
+    st.session_state.start_date=today-timedelat(days=today.weekday())
 #Erste Reihe: Wochentage + Datum
 cols=st.columns(7)
 for col, tag, wd in zip(cols,days, wochentage):
