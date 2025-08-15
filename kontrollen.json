@@ -104,6 +104,17 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-08-14": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Debora"
+        ],
+        "Nachmittag": [],
+        "Abend": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
