@@ -90,11 +90,11 @@ wochentage = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
 #Erste Reihe: Wochentage + Datum
 cols=st.columns(7)
 for col, tag, wd in zip(cols,days, wochentage):
-        col.markdown(
-            f"<div style='border:1px solid #ddd; padding:5px; text-align:center; font-weight:bold;'>"
-            f"{wd} {tag.day}.{tag.month}"
-            f"</div>", unsafe_allow_html=True
-        )
+    col.markdown(
+        f"<div style='border:1px solid #ddd; padding:5px; text-align:center; font-weight:bold;'>"
+        f"{wd} {tag.day}.{tag.month}"
+        f"</div>", unsafe_allow_html=True
+    )
 
 #Zweite Reihe: Avatare + Namen
 cols=st.columns(7)        
