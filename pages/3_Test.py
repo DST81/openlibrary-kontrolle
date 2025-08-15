@@ -125,20 +125,20 @@ for col, tag, wd in zip(cols,days, wochentage):
         f"{wd} {tag.day}.{tag.month}"
         f"</div>", unsafe_allow_html=True
     )
-
-#Zweite Reihe: Unterteilung in Morgen, Nachmittag und Abend mit Avatare + Namen
-cols=st.columns(7)
-for col, tag in zip(cols,days):
-    tag_str = tag.isoformat()
-
-    max_avatars_in_column =0
+#Max Höhe bestimmen
+max_avatars=0
+for tag in days:
+    tag_str=tag.isoformat()
     if tag_str in planung and 'oeffnungszeiten' in planung[tag_str]:
         for zeit in zeiten:
             slot_personen = planung[tag_str]["oeffnungszeiten"].get(zeit, [])
-            max_avatars_in_column = max(max_avatars_in_column, len(slot_personen))
-    #Höhe pro Slot: Grundhöhe + platz für Avatare
-    slot_height = 60+ max_avatars_in_column * 40
-    
+            max_avatars = max(max_avatars, len(slot_personen))
+#Höhe pro Slot: Grundhöhe + platz für Avatare
+slot_height = 60+ max_avatars * 40
+#Zweite Reihe: Unterteilung in Morgen, Nachmittag und Abend mit Avatare + Namen
+cols=st.columns(7)
+for col, tag in zip(cols,days):
+    tag_str = tag.isoformat()    
     col_html=''
     for zeit in zeiten:
         col_html+= (
