@@ -214,6 +214,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-08-20": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Janine"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
