@@ -73,7 +73,30 @@ avatars = {
 }
 
 st.set_page_config(page_title='Arbeitsplanung & Termine version 2', page_icon='📅', layout='wide')
-
+events=[]
+for tag, details in planung.items():
+  if 'oeffnungszeiten' in details and details['oeffnungszeiten']:
+    events.append({
+      'title':', '.join(details['oeffnungszeiten']),
+      'start':tag
+    })
+    if "klassenbesuch" in details and details["klassenbesuch"]:
+      events.append({
+          "title": "Klassenbesuch: " + details["klassenbesuch"],
+          "start": tag
+      })
+  if "bemerkung" in details and details["bemerkung"]:
+      events.append({
+          "title": "Bemerkung: " + details["bemerkung"],
+          "start": tag
+      })  
+                
+# === Neues Event hinzufügen ===
+st.subheader("📌 Termin hinzufügen")
+datum = st.date_input("Datum", date.today())
+oeffnungszeiten = st.multiselect("Wer übernimmt die Öffnungszeit?", list(avatars.keys()))
+klassenbesuch = st.text_input("Klassenbesuch (optional)")
+bemerkung = st.text_area("Bemerkung (optional)")
 raw_data,sha  = load_kontrollen()
 raw_data = migrate_kontrollen_if_needed(raw_data)
 kontrollen = raw_data['kontrollen']
