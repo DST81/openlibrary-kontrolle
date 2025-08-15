@@ -195,6 +195,14 @@
       },
       "klassenbesuch": null,
       "bemerkung": "14:00 Gschichte-Ziiit"
+    },
+    "2025-09-23": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": "19:00 Uhr Teamsitzung"
     }
   }
 }
