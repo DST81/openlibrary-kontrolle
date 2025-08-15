@@ -84,7 +84,7 @@ events=[]
 for tag, details in planung.items():
   if 'oeffnungszeiten' in details and details['oeffnungszeiten']:
     events.append({
-      'title':'Öffnungszeiten: ' +', '.join(details['oeffnungzeiten']),
+      'title':'Öffnungszeiten: ' +', '.join(details['oeffnungszeiten']),
       'start':tag
     })
     if "klassenbesuch" in details and details["klassenbesuch"]:
