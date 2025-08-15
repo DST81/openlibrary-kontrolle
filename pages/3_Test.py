@@ -142,7 +142,7 @@ for col, tag in zip(cols,days):
     col_html=''
     for zeit in zeiten:
         col_html+= (
-                f"<div style='border:1px solid #ccc; padding:3px; min-height:{slot_heigth}px; text-align:center;'>"
+                f"<div style='border:1px solid #ccc; padding:3px; min-height:{slot_height}px; text-align:center;'>"
                 f"<b>{zeit}</b><br>"    
         )            
 
