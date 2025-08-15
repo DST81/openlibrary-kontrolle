@@ -105,15 +105,30 @@ calendar_options = {
 }
 
 calendar(events=events, options=calendar_options)
+# Zeige eine Woche
+start_date = date(2025, 8, 18)
+for i in range(7):
+    tag = start_date + timedelta(days=i)
+    tag_str = tag.isoformat()
+    
+    st.subheader(tag_str)
+    
+    if tag_str in planung:
+        details = planung[tag_str]
+        
+        # Zeige Avatare oben als Icons
+        if 'oeffnungszeiten' in details:
+            cols = st.columns(len(details["oeffnungszeiten"]))
+            for col, p in zip(cols, details["oeffnungszeiten"]):
+                if p in avatars:
+                    col.image(avatars[p], width=40)
+        
+        # Zeige die Events darunter
+        if 'klassenbesuch' in details:
+            st.write(f"📝 Klassenbesuch: {details['klassenbesuch']}")
+        if 'bemerkung' in details:
+            st.write(f"💡 Bemerkung: {details['bemerkung']}")
 
-# Unter dem Kalender: Avatare der Mitarbeiter anzeigen
-st.write("Mitarbeiter Avatare für die Woche:")
-for tag, details in planung.items():
-    if 'oeffnungszeiten' in details and details['oeffnungszeiten']:
-        cols = st.columns(len(details["oeffnungszeiten"]))
-        for col, p in zip(cols, details["oeffnungszeiten"]):
-            if p in avatars:
-                col.image(avatars[p], width=50)  # Avatar-Bild anzeigen
                 
 # === Neues Event hinzufügen ===
 st.subheader("📌 Termin hinzufügen")
