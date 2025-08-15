@@ -78,52 +78,58 @@ raw_data = migrate_kontrollen_if_needed(raw_data)
 kontrollen = raw_data['kontrollen']
 wochenverantwortung = raw_data["wochenverantwortung"]
 planung = raw_data["planung"]
+
 st.set_page_config(page_title='Arbeitsplanung & Termine version 2', page_icon='📅', layout='wide')
             
 st.title('Arbeitsplanung - Termine')
 
 start_date= date(2025, 8, 11)
 days =[start_date + timedelta(days=i) for i in range(7)]
+wochentage = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
 
+#Erste Reihe: Wochentage + Datum
 cols=st.columns(7)
-for col, tag in zip(cols,days):
-    # Rahmen um den Tag
-    with col:
-        st.markdown(
-            f"""
-            <div style="
-                border: 1px solid #ccc;
-                border-radius: 10px;
-                padding: 10px;
-                text-align: center;
-                min-height: 150px;">
-                <strong>{tag.strftime('%a %d.%b')}</strong><br>
-            """, unsafe_allow_html=True)
-        
-    col.markdown(f"**{tag.strftime('%a %d.%b')}**")
+for col, tag, wd in zip(cols,days, wochentage):
+        col.markdown(
+            f"<div style='border:1px solid #ddd; padding:5px; text-align:center; font-weight:bold;'>"
+            f"{wd} {tag.day}.{tag.month}"
+            f"</div>", unsafe_allow_html=True
+        )
+
+#Zweite Reihe: Avatare + Namen
+cols=st.columns(7)        
     tag_str = tag.isoformat()
     oeffnungszeiten = planung.get(tag_str, {}).get('oeffnungszeiten')  # kann None sein
     if oeffnungszeiten: 
         avatar_html = ""
         for p in oeffnungszeiten:
             if p in avatars:
-                avatar_html += f'<img src="{avatars[p]}" width="40" style="margin:2px;"><br><small>{p}</small> '
-        st.markdown(avatar_html, unsafe_allow_html=True)
-        """for p in planung[tag_str]['oeffnungszeiten']:
-            if p in avatars:
-                col.image(avatars[p],width=40)"""
+                avatar_html += (
+                    f"<div style='display:inline-block; text-align:center; margin:2px;'>"
+                    f"<img src='{avatars[p]}' width='40' height='40'><br>{p}</div>"
+                )
+        col.markdown(
+            f"<div style='border:1px solid #ddd; padding:5px; min-height:60px;'>"
+            f"{avatars_html}</div>", unsafe_allow_html=True
+        )
+    else:
+        col.markdown("<div style='border:1px solid #ddd; padding:5px; min-height:60px;'></div>", unsafe_allow_html=True)
 
-
-    # Klassenbesuch / Bemerkung darunter
-    if tag_str in planung:
-        details = planung[tag_str]
-        if 'klassenbesuch' in details:
-            st.markdown(f"<br>📝 {details['klassenbesuch']}", unsafe_allow_html=True)
-        if 'bemerkung' in details:
-            st.markdown(f"<br>💡 {details['bemerkung']}", unsafe_allow_html=True)
-
- 
-    st.markdown("</div>", unsafe_allow_html=True)
+#Dritte Reihe: Klassenbesuche + Bemerkungen
+cols=st.columns(7)
+for col, tag in zip(cols,days):
+    tag_str=tag.isoformat()
+    details = planung.get(tag_str, {})
+    text = ""
+    if details.get("klassenbesuch"):
+        text += f"📝 {details['klassenbesuch']}<br>"
+    if details.get("bemerkung"):
+        text += f"💡 {details['bemerkung']}<br>"
+    col.markdown(
+        f"<div style='border:1px solid #ddd; padding:5px; min-height:40px; text-align:left;'>{text}</div>",
+        unsafe_allow_html=True
+    )
+    
 # === Neues Event hinzufügen ===
 st.subheader("📌 Termin hinzufügen")
 
