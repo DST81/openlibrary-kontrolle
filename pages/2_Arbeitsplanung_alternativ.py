@@ -93,6 +93,12 @@ with col1:
         st.session_state.start_date -=timedelta(days=7)
     if st.button("⬅ Letzter Monat"):
         st.session_state.start_date -=timedelta(days=30)
+with col2: 
+    selected_date= st.date_input(
+        "Springe zu Datum", 
+        value=st.session_state.get('start_date', date.today())
+    )
+    st.session_state.start_date=selected_date - timedelta(days=selected_date.weekday())
 with col3:
     if st.button("Nächste Woche ➡"):
         st.session_state.start_date +=timedelta(days=7)
