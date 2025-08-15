@@ -163,10 +163,6 @@ for col, tag in zip(cols, days):
         default= zeit in always_active_slots.get(wochentag, [])
         slot_needed = st.session_state['planning_slots'][tag_str].get(zeit, default)
 
-        # Checkbox zum Aktivieren/Deaktivieren
-        slot_needed = col.checkbox(f"{zeit}", value=slot_needed, key=f"slot_{tag_str}_{zeit}")
-        st.session_state['planning_slots'][tag_str][zeit] = slot_needed
-
         # Hintergrundfarbe: grün, wenn Slot aktiv
         bg_color = "#c6f5c6" if slot_needed else "#f9f9f9"
 
@@ -176,6 +172,14 @@ for col, tag in zip(cols, days):
             f"<b>{zeit}</b><br>"
         )
 
+        # Kleine Checkbox zum Aktivieren/Deaktivieren
+        slot_needed = col.checkbox(
+            'X',
+            value=slot_needed, 
+            key=f"slot_{tag_str}_{zeit}",
+            help="Slot schliessen/öffnen"
+        )
+        st.session_state['planning_slots'][tag_str][zeit] = slot_needed
 
         col_html += '</div>'
 
