@@ -226,7 +226,7 @@ zeit_slot = st.selectbox('Zeit', zeiten)
 selected_personen = default_oeffnungszeiten.get(zeit_slot, [])
 oeffnungszeiten = st.multiselect("Wer übernimmt die Ausleihe?", list(avatars.keys()), default=selected_personen)
 klassenbesuch = st.text_input("Klassenbesuch (optional)", value=default_klassenbesuch)
-bemerkung = st.text_area("Bemerkung (optional), value=default_bemerkung")
+bemerkung = st.text_area("Bemerkung (optional)", value=default_bemerkung)
  
       
 if st.button("💾 Speichern"):
