@@ -96,9 +96,11 @@ with col1:
 with col2: 
     selected_date= st.date_input(
         "Springe zu Datum", 
-        value=st.session_state.get('start_date', date.today())
+        value=st.session_state.start_date,
+        key='date_jump_input
     )
-    st.session_state.start_date=selected_date - timedelta(days=selected_date.weekday())
+    if selected_date != st.session_state.start_date:
+        st.session_state.start_date=selected_date - timedelta(days=selected_date.weekday())
 with col3:
     if st.button("Nächste Woche ➡"):
         st.session_state.start_date +=timedelta(days=7)
