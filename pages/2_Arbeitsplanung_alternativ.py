@@ -73,8 +73,30 @@ avatars = {
 }
 
 st.set_page_config(page_title='Arbeitsplanung & Termine version 2', page_icon='📅', layout='wide')
+            
+st.title('Arbeitsplanung - Termine')
 
-                
+start_date= date(2025, 8, 11)
+days =[start_date + timedelta(days=i) for i in range(7)]
+
+cols=st.columns(7)
+for col, tag in zip(cols,days):
+  tag_str = tag.isoformat()
+  if tag_str in planung and 'oeffnungszeiten' in planung[tag_str]:
+    for p in planung[tag_str]['oeffnungszeiten']:
+      if p in avatars:
+        col.image(avatars[p],width=40)
+cols=st.columns(7)
+for col, tag in zip(cols,days):
+  tag_str=tag.isoformat()
+  if tag_str in planung:
+    details=planung[tag_str]
+    if 'klassenbesuch' in details:
+      col.write(f"📝 {details['klassenbesuch']}")
+    if 'bemerkung' in details:
+      col.write(f"💡 {details['bemerkung']}")
+ 
+
 # === Neues Event hinzufügen ===
 st.subheader("📌 Termin hinzufügen")
 datum = st.date_input("Datum", date.today())
@@ -103,28 +125,7 @@ for tag, details in planung.items():
           "title": "Bemerkung: " + details["bemerkung"],
           "start": tag
       })  
-st.title('Arbeitsplanung - Termine')
-
-start_date= date(2025, 8, 11)
-days =[start_date + timedelta(days=i) for i in range(7)]
-
-cols=st.columns(7)
-for col, tag in zip(cols,days):
-  tag_str = tag.isoformat()
-  if tag_str in planung and 'oeffnungszeiten' in planung[tag_str]:
-    for p in planung[tag_str]['oeffnungszeiten']:
-      if p in avatars:
-        col.image(avatars[p],width=40)
-cols=st.columns(7)
-for col, tag in zip(cols,days):
-  tag_str=tag.isoformat()
-  if tag_str in planung:
-    details=planung[tag_str]
-    if 'klassenbesuch' in details:
-      col.write(f"📝 {details['klassenbesuch']}")
-    if 'bemerkung' in details:
-      col.write(f"💡 {details['bemerkung']}")
-        
+      
 if st.button("💾 Speichern"):
     planung[str(datum)] = {
         "oeffnungszeiten": oeffnungszeiten if oeffnungszeiten else None,
