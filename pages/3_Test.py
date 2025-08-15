@@ -114,7 +114,7 @@ if "start_date" not in st.session_state:
 start_date= st.session_state.start_date
 days =[start_date + timedelta(days=i) for i in range(7)]
 wochentage = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
-zeiten=['Morgen','Nachmittag','Abend']
+zeiten=['Morgen','Nachmittag']
 
 
 # Erste Reihe: Wochentage + Datum
