@@ -154,22 +154,7 @@ for col, tag in zip(cols,days):
         f"<div style='border:1px solid #ddd; padding:5px; min-height:40px; text-align:left;'>{text}</div>",
         unsafe_allow_html=True
     )
- # === Neues Event hinzufügen (Formular) ===
-if st.session_state.selected_day and st.session_state.selected_zeit:
-    st.markdown("---")
-    st.subheader(f"📌 Neues Event für {st.session_state.selected_day} {st.session_state.selected_zeit}")
-    new_event = st.text_input("Eventbeschreibung")
-    if st.button("Hinzufügen"):
-        tag_str = st.session_state.selected_day.isoformat()
-        if tag_str not in planung:
-            planung[tag_str] = {}
-        if "oeffnungszeiten" not in planung[tag_str] or planung[tag_str]["oeffnungszeiten"] is None:
-            planung[tag_str]["oeffnungszeiten"] = []
-        planung[tag_str]["oeffnungszeiten"].append(new_event)
-        st.success("Event hinzugefügt ✅")
-        st.session_state.selected_day = None
-        st.session_state.selected_zeit = None
-        st.experimental_rerun()   
+ 
 # === Neues Event hinzufügen (manuell) ===
 st.subheader("📌 Termin hinzufügen")
 
