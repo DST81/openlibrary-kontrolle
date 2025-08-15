@@ -95,12 +95,9 @@
   },
   "planung": {
     "2025-08-15": {
-      "oeffnungszeiten": [
-        "Daniela",
-        "Sarah"
-      ],
-      "klassenbesuch": "P1b",
-      "bemerkung": "Kommt jede Woche um 16.00 Uhr"
+      "oeffnungszeiten": null,
+      "klassenbesuch": null,
+      "bemerkung": null
     },
     "2025-08-19": {
       "oeffnungszeiten": [
