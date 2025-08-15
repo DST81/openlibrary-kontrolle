@@ -109,6 +109,13 @@
       ],
       "klassenbesuch": "P1b",
       "bemerkung": "Kommt jede Woche um 16.00 Uhr"
+    },
+    "2025-08-13": {
+      "oeffnungszeiten": [
+        "Janine"
+      ],
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
