@@ -137,7 +137,7 @@ for col, tag in zip(cols,days):
                 if p in avatars:
                     ac.image(avatars[p],width=40)
                     ac.caption(p)
-          markdown("</div>", unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
 #Dritte Reihe: Klassenbesuche + Bemerkungen
 cols=st.columns(7)
