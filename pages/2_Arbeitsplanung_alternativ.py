@@ -102,9 +102,10 @@ for col, tag in zip(cols,days):
         
     col.markdown(f"**{tag.strftime('%a %d.%b')}**")
     tag_str = tag.isoformat()
-    if tag_str in planung and 'oeffnungszeiten' in planung[tag_str]:
+    oeffnungszeiten = planung.get(tag_str, {}).get('oeffnungszeiten')  # kann None sein
+    if oeffnungszeiten: 
         avatar_html = ""
-        for p in planung[tag_str]['oeffnungszeiten']:
+        for p in oeffnungszeiten:
             if p in avatars:
                 avatar_html += f'<img src="{avatars[p]}" width="40" style="margin:2px;"><br><small>{p}</small> '
         st.markdown(avatar_html, unsafe_allow_html=True)
