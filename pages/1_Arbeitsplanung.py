@@ -3,6 +3,7 @@ import json
 from github import Github
 from datetime import date, timedelta
 from streamlit_calendar import calendar
+from github.GithubException import GithubException
 
 # === Hilfsfunktionen ===
 def load_kontrollen():
