@@ -23,7 +23,7 @@ today = date.today()
 year, week, _ = today.isocalendar()
 kw_key = f"{year}-W{week:02d}"
 
-
+st.set_page_config(page_title='OpenLibrary Kontrolle', page_icon='🧹', layout='wide')
 #Hilfsfunktion
 def load_kontrollen():
     try:
