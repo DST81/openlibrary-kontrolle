@@ -160,7 +160,7 @@ for col, tag in zip(cols, days):
     for zeit in zeiten:
         # Status des Slots (aktiv oder nicht)
         default_active= zeit in always_active_slots.get(wochentag, [])
-        override = st.session_state['slots_overrides'][tag_str].get(zeit, None)
+        override = st.session_state['slot_overrides'][tag_str].get(zeit, None)
 
         #Wenn Override existiert --> verwende diesen, sonst Default
         if override is None:
