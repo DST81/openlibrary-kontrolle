@@ -145,7 +145,7 @@ for col, tag in zip(cols, days):
             st.markdown(
                 f"<div style='border:1px solid #ccc; min-height:{slot_height}px; "
                 f"margin-bottom:5px; padding:5px; background-color:{bg_color}; "
-                f'display:flex; align-items:center;'>'
+                f"display:flex; align-items:center;">
                 f"<div style='flex:1;'><b>{zeit}</b></div>"
                 f"</div>", unsafe_allow_html=True
             )
