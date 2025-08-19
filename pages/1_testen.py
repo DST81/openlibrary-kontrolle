@@ -170,10 +170,10 @@ for col, tag in zip(cols, days):
 
             # Kleine Checkbox einklappar
         changed = st.checkbox(
-            "",
+            "🛠",
             value=slot_needed,
             key=f"override_{tag_str}_{zeit}",
-            help= '🛠'
+            help= f"{wochentag} {zeit} umschalten"
         )
         # Wenn sich etwas ändert --> als Override abspeichern
         if changed != default_active:
