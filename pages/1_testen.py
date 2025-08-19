@@ -125,20 +125,7 @@ for col, tag, wd in zip(cols,days, wochentage):
         f"{wd} {tag.day}.{tag.month}"
         f"</div>", unsafe_allow_html=True
     )
-# Fixe Höhe pro Slot
-slot_height = 120  # px, beliebig anpassbar
-
-# Zweite Reihe: Unterteilung in Morgen, Nachmittag und Abend mit Avatare + Namen
-always_active_slots = {
-    "Tuesday": ["Nachmittag"],
-    "Wednesday": ["Morgen"],
-    "Thursday": ["Morgen", "Nachmittag"],
-    "Friday": ["Morgen"],
-    "Saturday": ["Morgen"]
-}
-
-if 'slot_overrides' not in st.session_state:
-    st.session_state['slot_overrides'] = {}
+slot_height = 120  # feste Höhe pro Slot
 
 cols = st.columns(7)
 for col, tag in zip(cols, days):
@@ -148,60 +135,51 @@ for col, tag in zip(cols, days):
     if tag_str not in st.session_state['slot_overrides']:
         st.session_state['slot_overrides'][tag_str] = {}
 
-    col_html = ''
     for zeit in zeiten:
-        # Status des Slots (aktiv oder nicht)
         default_active = zeit in always_active_slots.get(wochentag, [])
         override = st.session_state['slot_overrides'][tag_str].get(zeit, None)
-
-        # Wenn Override existiert --> verwende diesen, sonst Default
         slot_needed = override if override is not None else default_active
-
-        # Kleine Checkbox einklappen
-        changed = st.checkbox(
-            "🛠",
-            value=slot_needed,
-            key=f"override_{tag_str}_{zeit}",
-            help=f"{wochentag} {zeit} umschalten"
-        )
-        # Override aktualisieren
-        if changed != default_active:
-            st.session_state['slot_overrides'][tag_str][zeit] = changed
-        else:
-            st.session_state['slot_overrides'][tag_str][zeit] = None
 
         # Hintergrundfarbe
         if slot_needed and override is None:
-            bg_color = "#c6f5c6"  # grün
-        elif slot_needed and override:  # manuell aktiviert
+            bg_color = "#c6f5c6"
+        elif slot_needed and override:
             bg_color = "#f9e6c6"
         elif not slot_needed and override is False:
-            bg_color = "#f5c6c6"  # rot
+            bg_color = "#f5c6c6"
         else:
             bg_color = "#f9f9f9"
 
-        # HTML für Slot
-        col_html += (
-            f"<div style='border:1px solid #ccc; padding:3px; min-height:{slot_height}px; "
-            f"text-align:center; background-color:{bg_color};'>"
-            f"<b>{zeit}</b><br>"
-        )
-        # Avatare einfügen
-        slot_personen = planung.get(tag_str, {}).get('oeffnungszeiten', {}).get(zeit, [])
-        for p in slot_personen:
-            if p in avatars_b64:
-                col_html += (
-                    f"<div style='display:inline-block; margin:2px;'>"
-                    f"<img src='data:image/png;base64,{avatars_b64[p]}' width='30' "
-                    f"style='border-radius:50%; display:block; margin:auto;'>"
-                    f"<small>{p}</small></div>"
+        # Box mit fester Höhe und horizontaler Anordnung
+        with col:
+            st.markdown(
+                f"<div style='border:1px solid #ccc; min-height:{slot_height}px; "
+                f"margin-bottom:5px; padding:5px; background-color:{bg_color}; "
+                f"display:flex; align-items:center;'>"
+                f"<div style='flex:1;'><b>{zeit}</b></div>"
+                f"</div>",
+                unsafe_allow_html=True
+            )
+
+            # Checkbox + Avatare horizontal
+            inner_cols = st.columns([1, 3])
+            with inner_cols[0]:
+                changed = st.checkbox(
+                    "",
+                    value=slot_needed,
+                    key=f"override_{tag_str}_{zeit}"
                 )
-        col_html += "</div>"
+                if changed != default_active:
+                    st.session_state['slot_overrides'][tag_str][zeit] = changed
+                else:
+                    st.session_state['slot_overrides'][tag_str][zeit] = None
 
-    # HTML in Spalte rendern
-    col.markdown(col_html, unsafe_allow_html=True)
-   
-
+            with inner_cols[1]:
+                slot_personen = planung.get(tag_str, {}).get('oeffnungszeiten', {}).get(zeit, [])
+                for p in slot_personen:
+                    if p in avatars_b64:
+                        st.image(avatars_b64[p], width=30, caption=p)
+                        
 #Dritte Reihe: Klassenbesuche + Bemerkungen
 cols=st.columns(7)
 for col, tag in zip(cols,days):
