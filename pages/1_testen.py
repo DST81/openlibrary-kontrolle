@@ -6,15 +6,15 @@ from streamlit_calendar import calendar
 from github.GithubException import GithubException
 import base64
 
-#Repo-Infos
-GITHUB_USER="DST81"
-REPO_NAME="openlibrary-kontrolle"
-BRANCH= "main"
+# Repo-Infos
+GITHUB_USER = "DST81"
+REPO_NAME = "openlibrary-kontrolle"
+BRANCH = "main"
 FILE_PATH = "kontrollen.json"
 
-token=st.secrets['github_token']
-g=Github(token)
-repo= g.get_user(GITHUB_USER).get_repo(REPO_NAME)
+token = st.secrets['github_token']
+g = Github(token)
+repo = g.get_user(GITHUB_USER).get_repo(REPO_NAME)
 
 # === Hilfsfunktionen ===
 def load_kontrollen():
@@ -43,13 +43,11 @@ def save_kontrollen(data_dict, sha):
     return contents.sha
 
 def migrate_kontrollen_if_needed(raw_data):
-    # Falls schon alles vorhanden ist
     if all(k in raw_data for k in ["kontrollen", "wochenverantwortung", "planung"]):
         return raw_data
     kontrollen = raw_data.get("kontrollen", {})
     wochenverantwortung = raw_data.get("wochenverantwortung", {})
     planung = raw_data.get("planung", {})
-    # Falls alte Struktur (nur Datumsschlüssel) → migrieren
     if not kontrollen and any(k for k in raw_data.keys() if "-" in k):
         for key, value in raw_data.items():
             try:
@@ -77,54 +75,36 @@ def img_to_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-# Avatare in Base64 umwandeln
 avatars_b64 = {name: img_to_base64(path) for name, path in avatars.items()}
 
-raw_data,sha  = load_kontrollen()
+raw_data, sha = load_kontrollen()
 raw_data = migrate_kontrollen_if_needed(raw_data)
 kontrollen = raw_data['kontrollen']
 wochenverantwortung = raw_data["wochenverantwortung"]
 planung = raw_data["planung"]
 
 st.set_page_config(page_title='Arbeitsplanung', page_icon='📅', layout='wide')
-            
 st.title('Arbeitsplanung - Termine')
 
+# Aktueller Wochenanfang (Montag)
 if "start_date" not in st.session_state:
-    #aktueller Wochenanfang(Montag)
-    today=date.today()
-    st.session_state.start_date=today-timedelta(days=today.weekday())
-    
-col1, col2, col3 = st.columns([1,2,1])
+    today = date.today()
+    st.session_state.start_date = today - timedelta(days=today.weekday())
 
-with col1: 
-    selected_date= st.date_input(
-        "Datum", 
-        value=st.session_state.start_date,
-        key='date_jump_input'
-    )
-    if selected_date != st.session_state.start_date:
-        st.session_state.start_date=selected_date - timedelta(days=selected_date.weekday())
-
-if "start_date" not in st.session_state:
-    #aktueller Wochenanfang(Montag)
-    today=data.today()
-    st.session_state.start_date=today-timedelat(days=today.weekday())
-     
-start_date= st.session_state.start_date
-days =[start_date + timedelta(days=i) for i in range(7)]
+start_date = st.session_state.start_date
+days = [start_date + timedelta(days=i) for i in range(7)]
 wochentage = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
-zeiten=['Morgen','Nachmittag', 'Abend']
-
+zeiten = ['Morgen', 'Nachmittag', 'Abend']
 
 # Erste Reihe: Wochentage + Datum
-cols=st.columns(7)
-for col, tag, wd in zip(cols,days, wochentage):
+cols = st.columns(7)
+for col, tag, wd in zip(cols, days, wochentage):
     col.markdown(
         f"<div style='border:1px solid #ddd; padding:5px; text-align:center; font-weight:bold;'>"
         f"{wd} {tag.day}.{tag.month}"
         f"</div>", unsafe_allow_html=True
     )
+
 slot_height = 120  # feste Höhe pro Slot
 
 # Zweite Reihe: Unterteilung in Morgen, Nachmittag und Abend mit Avatare + Namen
@@ -139,12 +119,10 @@ always_active_slots = {
 if 'slot_overrides' not in st.session_state:
     st.session_state['slot_overrides'] = {}
 
-
 cols = st.columns(7)
 for col, tag in zip(cols, days):
     tag_str = tag.isoformat()
     wochentag = tag.strftime("%A")
-
     if tag_str not in st.session_state['slot_overrides']:
         st.session_state['slot_overrides'][tag_str] = {}
 
@@ -163,7 +141,6 @@ for col, tag in zip(cols, days):
         else:
             bg_color = "#f9f9f9"
 
-        # Box mit fester Höhe und horizontaler Anordnung
         with col:
             st.markdown(
                 f"<div style='border:1px solid #ccc; min-height:{slot_height}px; "
@@ -177,11 +154,7 @@ for col, tag in zip(cols, days):
             # Checkbox + Avatare horizontal
             inner_cols = st.columns([1, 3])
             with inner_cols[0]:
-                changed = st.checkbox(
-                    "",
-                    value=slot_needed,
-                    key=f"override_{tag_str}_{zeit}"
-                )
+                changed = st.checkbox("", value=slot_needed, key=f"override_{tag_str}_{zeit}")
                 if changed != default_active:
                     st.session_state['slot_overrides'][tag_str][zeit] = changed
                 else:
@@ -193,11 +166,10 @@ for col, tag in zip(cols, days):
                     if p in avatars_b64:
                         st.image(avatars_b64[p], width=30, caption=p)
 
-
-#Dritte Reihe: Klassenbesuche + Bemerkungen
-cols=st.columns(7)
-for col, tag in zip(cols,days):
-    tag_str=tag.isoformat()
+# Dritte Reihe: Klassenbesuche + Bemerkungen
+cols = st.columns(7)
+for col, tag in zip(cols, days):
+    tag_str = tag.isoformat()
     details = planung.get(tag_str, {})
     text = ""
     if details.get("klassenbesuch"):
@@ -208,13 +180,12 @@ for col, tag in zip(cols,days):
         f"<div style='border:1px solid #ddd; padding:5px; min-height:40px; text-align:left;'>{text}</div>",
         unsafe_allow_html=True
     )
- 
+
 # === Neues Event hinzufügen (manuell) ===
 st.subheader("📌 Termin hinzufügen")
 
-datum = st.date_input("Datum", value=st.session_state.start_date or date.today())
+datum = st.date_input("Datum", value=st.session_state.start_date)
 
-# Standardwerte setzen, falls bereits geplant
 existing = planung.get(datum.isoformat(), {})
 default_oeffnungszeiten = existing.get("oeffnungszeiten", {})
 default_klassenbesuch = existing.get("klassenbesuch", "")
@@ -225,8 +196,7 @@ selected_personen = default_oeffnungszeiten.get(zeit_slot, [])
 oeffnungszeiten = st.multiselect("Wer übernimmt die Ausleihe?", list(avatars.keys()), default=selected_personen)
 klassenbesuch = st.text_input("Klassenbesuch (optional)", value=default_klassenbesuch)
 bemerkung = st.text_area("Bemerkung (optional)", value=default_bemerkung)
- 
-      
+
 if st.button("💾 Speichern"):
     tag_str = str(datum)
     if tag_str not in planung:
@@ -235,11 +205,10 @@ if st.button("💾 Speichern"):
             "klassenbesuch": None,
             "bemerkung": None
         }
-     # Personen im gewählten Zeitslot eintragen
     planung[tag_str]["oeffnungszeiten"][zeit_slot] = oeffnungszeiten
     planung[tag_str]["klassenbesuch"] = klassenbesuch if klassenbesuch else None
     planung[tag_str]["bemerkung"] = bemerkung if bemerkung else None
-   
+
     sha = save_kontrollen({
         "kontrollen": kontrollen,
         "wochenverantwortung": wochenverantwortung,
