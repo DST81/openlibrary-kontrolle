@@ -127,6 +127,8 @@ for col, tag, wd in zip(cols,days, wochentage):
     )
 slot_height = 120  # feste Höhe pro Slot
 
+slot_height = 120  # feste Höhe pro Slot
+
 cols = st.columns(7)
 for col, tag in zip(cols, days):
     tag_str = tag.isoformat()
@@ -179,7 +181,8 @@ for col, tag in zip(cols, days):
                 for p in slot_personen:
                     if p in avatars_b64:
                         st.image(avatars_b64[p], width=30, caption=p)
-                        
+
+
 #Dritte Reihe: Klassenbesuche + Bemerkungen
 cols=st.columns(7)
 for col, tag in zip(cols,days):
