@@ -169,12 +169,12 @@ for col, tag in zip(cols, days):
             slot_needed = override
 
             # Kleine Checkbox einklappar
-        with col.expander('🛠', expanded=False):
-            changed = st.checkbox(
-                f"{wochentag} {zeit}",
-                value=slot_needed,
-                key=f"override_{tag_str}_{zeit}"
-            )
+        changed = st.checkbox(
+            "",
+            value=slot_needed,
+            key=f"override_{tag_str}_{zeit}",
+            help= '🛠'
+        )
         # Wenn sich etwas ändert --> als Override abspeichern
         if changed != default_active:
             st.session_state['slot_overrides'][tag_str][zeit] = changed
