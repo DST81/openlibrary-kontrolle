@@ -122,6 +122,7 @@ cols = st.columns(7)
 for col, tag in zip(cols, days):
     tag_str = tag.isoformat()
     wochentag = tag.strftime("%A")
+
     if tag_str not in st.session_state['slot_overrides']:
         st.session_state['slot_overrides'][tag_str] = {}
 
@@ -140,22 +141,29 @@ for col, tag in zip(cols, days):
         else:
             bg_color = "#f9f9f9"
 
-        # Slot-Box mit fester Höhe
+        # Box mit fester Höhe
         with col:
             st.markdown(
-            f"""<div style="border:1px solid #ccc; min-height:{slot_height}px; margin-bottom:5px; padding:5px; 
-            background-color:{bg_color}; display:flex; align-items:center;">
-            <div style="flex:1;"><b>{zeit}</b></div>
-            </div>""", unsafe_allow_html=True
-        )
+                f"<div style='border:1px solid #ccc; min-height:{slot_height}px; "
+                f"margin-bottom:5px; padding:5px; background-color:{bg_color}; "
+                f'display:flex; flex-direction:column;'>'
+                f"<div style='flex:0 0 auto; font-weight:bold;'>{zeit}</div>"
+                f"<div style='flex:1 1 auto; display:flex; align-items:center; margin-top:5px;'>"
+                f"</div></div>",
+                unsafe_allow_html=True
+            )
 
-            # Checkbox + Avatare horizontal
             inner_cols = st.columns([1, 3])
             with inner_cols[0]:
-                changed = st.checkbox("", value=slot_needed, key=f"override_{tag_str}_{zeit}")
-                st.session_state['slot_overrides'][tag_str][zeit] = (
-                    changed if changed != default_active else None
+                changed = st.checkbox(
+                    "",
+                    value=slot_needed,
+                    key=f"override_{tag_str}_{zeit}"
                 )
+                if changed != default_active:
+                    st.session_state['slot_overrides'][tag_str][zeit] = changed
+                else:
+                    st.session_state['slot_overrides'][tag_str][zeit] = None
 
             with inner_cols[1]:
                 slot_personen = planung.get(tag_str, {}).get('oeffnungszeiten', {}).get(zeit, [])
