@@ -169,7 +169,7 @@ for col, tag in zip(cols, days):
             slot_needed = override
 
             # Kleine Checkbox einklappar
-        with st.expander('🛠', expanded=False):
+        with col.expander('🛠', expanded=False):
             changed = st.checkbox(
                 f"{wochentag} {zeit}",
                 value=slot_needed,
