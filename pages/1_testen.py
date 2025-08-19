@@ -143,12 +143,11 @@ for col, tag in zip(cols, days):
         # Slot-Box mit fester Höhe
         with col:
             st.markdown(
-                f"<div style='border:1px solid #ccc; min-height:{slot_height}px; "
-                f"margin-bottom:5px; padding:5px; background-color:{bg_color}; "
-                f"display:flex; align-items:center;">
-                f"<div style='flex:1;'><b>{zeit}</b></div>"
-                f"</div>", unsafe_allow_html=True
-            )
+            f"""<div style="border:1px solid #ccc; min-height:{slot_height}px; margin-bottom:5px; padding:5px; 
+            background-color:{bg_color}; display:flex; align-items:center;">
+            <div style="flex:1;"><b>{zeit}</b></div>
+            </div>""", unsafe_allow_html=True
+        )
 
             # Checkbox + Avatare horizontal
             inner_cols = st.columns([1, 3])
