@@ -127,7 +127,18 @@ for col, tag, wd in zip(cols,days, wochentage):
     )
 slot_height = 120  # feste Höhe pro Slot
 
-slot_height = 120  # feste Höhe pro Slot
+# Zweite Reihe: Unterteilung in Morgen, Nachmittag und Abend mit Avatare + Namen
+always_active_slots = {
+    "Tuesday": ["Nachmittag"],
+    "Wednesday": ["Morgen"],
+    "Thursday": ["Morgen", "Nachmittag"],
+    "Friday": ["Morgen"],
+    "Saturday": ["Morgen"]
+}
+
+if 'slot_overrides' not in st.session_state:
+    st.session_state['slot_overrides'] = {}
+
 
 cols = st.columns(7)
 for col, tag in zip(cols, days):
