@@ -161,7 +161,10 @@ for col, tag in zip(cols, days):
                 slot_personen = planung.get(tag_str, {}).get('oeffnungszeiten', {}).get(zeit, [])
                 for p in slot_personen:
                     if p in avatars_b64:
-                        st.image(avatars_b64[p], width=30, caption=p)
+                        st.markdown(
+                            f'<img src="data:image/png;base64,{avatars_b64[p]}" width="30" title="{p}" style="margin-right:5px;">',
+                            unsafe_allow_html=True
+                        )
 
 # ----------------- Klassenbesuche + Bemerkungen -----------------
 cols = st.columns(7)
