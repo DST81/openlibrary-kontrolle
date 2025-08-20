@@ -541,11 +541,13 @@
     },
     "2025-08-25": {
       "oeffnungszeiten": {
-        "Morgen": [],
+        "Morgen": [
+          "Sarah"
+        ],
         "Nachmittag": []
       },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
+      "klassenbesuch": " 8.30 - 9.15 ",
+      "bemerkung": "Bookstar bei S1 (?), bei Bettina in Klasse"
     },
     "2025-09-01": {
       "oeffnungszeiten": {
