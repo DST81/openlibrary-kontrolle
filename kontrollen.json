@@ -426,11 +426,13 @@
     },
     "2025-09-15": {
       "oeffnungszeiten": {
-        "Morgen": [],
+        "Morgen": [
+          "Sarah"
+        ],
         "Nachmittag": []
       },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
+      "klassenbesuch": " 7.35 B1a Susann Jost",
+      "bemerkung": "Einführung / Bookstar"
     },
     "2025-09-17": {
       "oeffnungszeiten": {
