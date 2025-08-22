@@ -564,6 +564,14 @@
       },
       "klassenbesuch": " 14:15-15:00 P4a",
       "bemerkung": null
+    },
+    "2025-10-17": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": "9:00 Verslimorgen "
     }
   }
 }
