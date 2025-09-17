@@ -636,6 +636,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": "19:00 Uhr Sitzung"
+    },
+    "2025-10-22": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Daniela"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
