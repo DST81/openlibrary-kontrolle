@@ -743,6 +743,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-11-04": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": [
+          "Daniela"
+        ]
+      },
+      "klassenbesuch": null,
+      "bemerkung": "Markt "
     }
   }
 }
