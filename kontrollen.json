@@ -480,12 +480,13 @@
     "2025-09-24": {
       "oeffnungszeiten": {
         "Morgen": [
-          "Janine"
+          "Janine",
+          "Daniela"
         ],
         "Nachmittag": []
       },
       "klassenbesuch": null,
-      "bemerkung": null
+      "bemerkung": "P4b Actionbound"
     },
     "2025-09-25": {
       "oeffnungszeiten": {
