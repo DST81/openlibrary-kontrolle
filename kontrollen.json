@@ -960,6 +960,17 @@
       },
       "klassenbesuch": null,
       "bemerkung": "9:00 Uhr Verslimorgen"
+    },
+    "2025-11-29": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Susanne",
+          "Aniko"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
