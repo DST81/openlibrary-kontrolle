@@ -700,6 +700,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-10-30": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Susanne"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
