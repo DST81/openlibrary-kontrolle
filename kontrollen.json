@@ -618,6 +618,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-10-20": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": [
+          "Aniko"
+        ]
+      },
+      "klassenbesuch": null,
+      "bemerkung": "19:00 Uhr Sitzung"
     }
   }
 }
