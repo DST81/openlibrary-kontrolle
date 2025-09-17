@@ -861,9 +861,7 @@
     "2025-11-17": {
       "oeffnungszeiten": {
         "Morgen": [],
-        "Nachmittag": [
-          "Aniko"
-        ]
+        "Nachmittag": []
       },
       "klassenbesuch": null,
       "bemerkung": null
