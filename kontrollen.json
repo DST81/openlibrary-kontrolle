@@ -800,12 +800,10 @@
     "2025-11-10": {
       "oeffnungszeiten": {
         "Morgen": [],
-        "Nachmittag": [
-          "Aniko"
-        ]
+        "Nachmittag": []
       },
       "klassenbesuch": null,
-      "bemerkung": null
+      "bemerkung": "19:00 Uhr Kärtli-Kurs mit Yoli"
     }
   }
 }
