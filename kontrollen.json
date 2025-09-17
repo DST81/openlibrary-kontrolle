@@ -583,6 +583,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-10-15": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Janine"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
