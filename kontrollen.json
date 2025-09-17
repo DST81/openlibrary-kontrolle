@@ -725,9 +725,7 @@
     },
     "2025-10-27": {
       "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
+        "Morgen": [],
         "Nachmittag": []
       },
       "klassenbesuch": null,
