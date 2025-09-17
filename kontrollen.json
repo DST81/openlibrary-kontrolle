@@ -573,6 +573,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": "9:00 Verslimorgen "
+    },
+    "2025-10-14": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": [
+          "Sarah"
+        ]
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
