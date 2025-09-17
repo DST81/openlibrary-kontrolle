@@ -628,6 +628,14 @@
       },
       "klassenbesuch": null,
       "bemerkung": "19:00 Uhr Sitzung"
+    },
+    "2025-10-21": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
