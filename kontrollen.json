@@ -796,6 +796,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-11-10": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": [
+          "Aniko"
+        ]
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
