@@ -679,6 +679,17 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-10-28": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": [
+          "Aniko",
+          "Daniela"
+        ]
+      },
+      "klassenbesuch": null,
+      "bemerkung": "17:00 Uhr Musikschulkonzert"
     }
   }
 }
