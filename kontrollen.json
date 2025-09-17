@@ -753,6 +753,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": "Markt "
+    },
+    "2025-11-05": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Aniko"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
