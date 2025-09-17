@@ -715,7 +715,9 @@
     },
     "2025-10-31": {
       "oeffnungszeiten": {
-        "Morgen": [],
+        "Morgen": [
+          "Susanne"
+        ],
         "Nachmittag": [
           "Janine"
         ]
