@@ -928,6 +928,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-11-26": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Janine"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
