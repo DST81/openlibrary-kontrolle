@@ -668,6 +668,17 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-10-25": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Debora",
+          "Susanne"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
