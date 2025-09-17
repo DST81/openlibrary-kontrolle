@@ -632,7 +632,9 @@
     "2025-10-21": {
       "oeffnungszeiten": {
         "Morgen": [],
-        "Nachmittag": []
+        "Nachmittag": [
+          "Aniko"
+        ]
       },
       "klassenbesuch": null,
       "bemerkung": null
