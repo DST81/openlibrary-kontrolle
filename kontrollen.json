@@ -804,6 +804,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": "19:00 Uhr Kärtli-Kurs mit Yoli"
+    },
+    "2025-11-11": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": [
+          "Aniko"
+        ]
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
