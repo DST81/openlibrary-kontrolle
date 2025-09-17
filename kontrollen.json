@@ -690,6 +690,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": "17:00 Uhr Musikschulkonzert"
+    },
+    "2025-10-29": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Janine"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
