@@ -712,6 +712,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-10-31": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": [
+          "Janine"
+        ]
+      },
+      "klassenbesuch": null,
+      "bemerkung": "14:00 Uhr Gschichte-Ziit"
     }
   }
 }
