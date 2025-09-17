@@ -918,6 +918,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": null
+    },
+    "2025-11-25": {
+      "oeffnungszeiten": {
+        "Morgen": [],
+        "Nachmittag": [
+          "Aniko"
+        ]
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
