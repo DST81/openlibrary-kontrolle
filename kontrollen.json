@@ -722,6 +722,16 @@
       },
       "klassenbesuch": null,
       "bemerkung": "14:00 Uhr Gschichte-Ziit"
+    },
+    "2025-10-27": {
+      "oeffnungszeiten": {
+        "Morgen": [
+          "Susanne"
+        ],
+        "Nachmittag": []
+      },
+      "klassenbesuch": null,
+      "bemerkung": null
     }
   }
 }
