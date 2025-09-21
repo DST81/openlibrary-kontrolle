@@ -136,8 +136,8 @@ if 'edit_mode' not in st.session_state:
     st.session_state.edit_mode = None
 
 # Ferienzeitraum (hier anpassen)
-ferien_start =date(2025,6,29)
-ferien_ende =date(2025,8,31)
+ferien_start =date(2025,9,22)
+ferien_ende =date(2025,10,31)
 
 
 #Alle Tage der Ferien iterieren
