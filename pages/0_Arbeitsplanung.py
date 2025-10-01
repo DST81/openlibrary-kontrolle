@@ -10,7 +10,7 @@ import base64
 GITHUB_USER="DST81"
 REPO_NAME="openlibrary-kontrolle"
 BRANCH= "main"
-FILE_PATH = "kontrollen.json"
+FILE_PATH = "arbeitsplan.json"
 
 token=st.secrets['github_token']
 g=Github(token)
@@ -27,7 +27,7 @@ def load_kontrollen():
 
 def save_kontrollen(data_dict, sha):
     new_content = json.dumps(data_dict, indent=2, ensure_ascii=False)
-    commit_message = f"Update Kontrollen/Planung am {date.today().isoformat()}"
+    commit_message = f"Update Arbeitsplan am {date.today().isoformat()}"
     try:
         if sha:
             repo.update_file(FILE_PATH, commit_message, new_content, sha, branch=BRANCH)
@@ -80,11 +80,8 @@ def img_to_base64(path):
 # Avatare in Base64 umwandeln
 avatars_b64 = {name: img_to_base64(path) for name, path in avatars.items()}
 
-raw_data,sha  = load_kontrollen()
-raw_data = migrate_kontrollen_if_needed(raw_data)
-kontrollen = raw_data['kontrollen']
-wochenverantwortung = raw_data["wochenverantwortung"]
-planung = raw_data["planung"]
+planung,sha  = load_kontrollen()
+
 
 st.set_page_config(page_title='Arbeitsplanung', page_icon='📅', layout='wide')
             
@@ -242,10 +239,6 @@ if st.button("💾 Speichern"):
     planung[tag_str]["klassenbesuch"] = klassenbesuch if klassenbesuch else None
     planung[tag_str]["bemerkung"] = bemerkung if bemerkung else None
    
-    sha = save_kontrollen({
-        "kontrollen": kontrollen,
-        "wochenverantwortung": wochenverantwortung,
-        "planung": planung
-    }, sha)
+    sha = save_kontrollen(planung, sha)
     st.success("Termin gespeichert ✅")
     st.rerun()
