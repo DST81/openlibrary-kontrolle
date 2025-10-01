@@ -1,881 +1,881 @@
-"planung": {
-    "2025-08-15": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko"
-        ],
-        "Nachmittag": [],
-        "Abend": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-08-14": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Daniela"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ],
-        "Abend": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-08-13": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Janine"
-        ],
-        "Nachmittag": [],
-        "Abend": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-08-12": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Daniela",
-          "Aniko"
-        ],
-        "Abend": [
-          "Daniela",
-          "Aniko"
-        ]
-      },
-      "klassenbesuch": "14:15-15:00 P4a",
-      "bemerkung": null
-    },
-    "2025-08-16": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Debora",
-          "Janine"
-        ],
-        "Nachmittag": [],
-        "Abend": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-08-23": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne",
-          "Daniela"
-        ],
-        "Nachmittag": [],
-        "Abend": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": "10:00-12:00 Erzählcafé"
-    },
-    "2025-08-11": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": "14:15-15:00 P4a",
-      "bemerkung": "15:00 Teamsitzung"
-    },
-    "2025-08-29": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Sarah"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": "9:00 Verslimorgen (Janine)"
-    },
-    "2025-09-05": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": "14:00 Gschichte-Ziiit\nPersonalausflug (geschlossen)\n"
-    },
-    "2025-09-23": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Daniela"
-        ]
-      },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
-    },
-    "2025-08-19": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Aniko",
-          "Daniela"
-        ]
-      },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
-    },
-    "2025-08-20": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Janine"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-08-21": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": "11.20-11.55 P5b",
-      "bemerkung": null
-    },
-    "2025-08-22": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Daniela"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-08-26": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Aniko"
-        ]
-      },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
-    },
-    "2025-08-27": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-08-28": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": "11.20-11.55 P5b",
-      "bemerkung": null
-    },
-    "2025-08-30": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko",
-          "Debora"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-02": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Sarah"
-        ]
-      },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
-    },
-    "2025-09-03": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Janine"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-04": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": "11.20-11.55 P5b",
-      "bemerkung": null
-    },
-    "2025-09-06": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Janine",
-          "Daniela"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-08": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
-    },
-    "2025-09-09": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Aniko"
-        ]
-      },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
-    },
-    "2025-09-10": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-11": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": "11.20-11.55 P5b",
-      "bemerkung": null
-    },
-    "2025-09-12": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-13": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Daniela",
-          "Debora"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-29": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-04": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Janine"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-16": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Aniko"
-        ]
-      },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": "19:00 Uhr Teamsitzung"
-    },
-    "2025-09-15": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Sarah"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": " 7.35 B1a Susann Jost",
-      "bemerkung": "Einführung / Bookstar"
-    },
-    "2025-09-17": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Daniela"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-18": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": "11.20-11.55 P5b",
-      "bemerkung": null
-    },
-    "2025-09-19": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-20": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Debora",
-          "Susanne"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-24": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Janine",
-          "Daniela"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": "P4b Actionbound"
-    },
-    "2025-09-25": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": "11.20-11.55 P5b",
-      "bemerkung": null
-    },
-    "2025-09-26": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-09-27": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko",
-          "Susanne"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-11": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne",
-          "Daniela"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-08-18": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
-    },
-    "2025-08-25": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Sarah"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": " 8.30 - 9.15 ",
-      "bemerkung": "Bookstar bei S1 (?), bei Bettina in Klasse"
-    },
-    "2025-09-01": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
-    },
-    "2025-09-22": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": " 14:15-15:00 P4a",
-      "bemerkung": null
-    },
-    "2025-10-17": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": "9:00 Verslimorgen "
-    },
-    "2025-10-14": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Sarah"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-15": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Janine"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-16": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-18": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Daniela",
-          "Debora"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-20": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-21": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Aniko"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": "19:00 Uhr Sitzung"
-    },
-    "2025-10-22": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Daniela"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-23": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-24": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-25": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Debora",
-          "Susanne"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-28": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Aniko",
-          "Daniela"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": "17:00 Uhr Musikschulkonzert"
-    },
-    "2025-10-29": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Janine"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-30": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-10-31": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Janine"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": "14:00 Uhr Gschichte-Ziit"
-    },
-    "2025-10-27": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-01": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko",
-          "Daniela"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-04": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Daniela"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": "Markt "
-    },
-    "2025-11-05": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-06": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-07": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-08": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne",
-          "Janine"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-10": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": "19:00 Uhr Kärtli-Kurs mit Yoli"
-    },
-    "2025-11-11": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Aniko"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-12": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Janine"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-13": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-14": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-15": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko",
-          "Daniela"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-17": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-18": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Aniko"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-19": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Daniela"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-20": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-21": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-22": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Daniela",
-          "Debora"
-          "Aniko"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-25": {
-      "oeffnungszeiten": {
-        "Morgen": [],
-        "Nachmittag": [
-          "Aniko"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-26": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Janine"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-27": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne"
-        ],
-        "Nachmittag": [
-          "Debora"
-        ]
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    },
-    "2025-11-28": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Aniko"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": "9:00 Uhr Verslimorgen"
-    },
-    "2025-11-29": {
-      "oeffnungszeiten": {
-        "Morgen": [
-          "Susanne",
-          "Aniko"
-        ],
-        "Nachmittag": []
-      },
-      "klassenbesuch": null,
-      "bemerkung": null
-    }
-  }
+{
+"2025-08-15": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko"
+    ],
+    "Nachmittag": [],
+    "Abend": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-08-14": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Daniela"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ],
+    "Abend": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-08-13": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Janine"
+    ],
+    "Nachmittag": [],
+    "Abend": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-08-12": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Daniela",
+      "Aniko"
+    ],
+    "Abend": [
+      "Daniela",
+      "Aniko"
+    ]
+  },
+  "klassenbesuch": "14:15-15:00 P4a",
+  "bemerkung": null
+},
+"2025-08-16": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Debora",
+      "Janine"
+    ],
+    "Nachmittag": [],
+    "Abend": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-08-23": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne",
+      "Daniela"
+    ],
+    "Nachmittag": [],
+    "Abend": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": "10:00-12:00 Erzählcafé"
+},
+"2025-08-11": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": "14:15-15:00 P4a",
+  "bemerkung": "15:00 Teamsitzung"
+},
+"2025-08-29": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Sarah"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": "9:00 Verslimorgen (Janine)"
+},
+"2025-09-05": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": "14:00 Gschichte-Ziiit\nPersonalausflug (geschlossen)\n"
+},
+"2025-09-23": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Daniela"
+    ]
+  },
+  "klassenbesuch": " 14:15-15:00 P4a",
+  "bemerkung": null
+},
+"2025-08-19": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Aniko",
+      "Daniela"
+    ]
+  },
+  "klassenbesuch": " 14:15-15:00 P4a",
+  "bemerkung": null
+},
+"2025-08-20": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Janine"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-08-21": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": "11.20-11.55 P5b",
+  "bemerkung": null
+},
+"2025-08-22": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Daniela"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-08-26": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Aniko"
+    ]
+  },
+  "klassenbesuch": " 14:15-15:00 P4a",
+  "bemerkung": null
+},
+"2025-08-27": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-08-28": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": "11.20-11.55 P5b",
+  "bemerkung": null
+},
+"2025-08-30": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko",
+      "Debora"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-02": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Sarah"
+    ]
+  },
+  "klassenbesuch": " 14:15-15:00 P4a",
+  "bemerkung": null
+},
+"2025-09-03": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Janine"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-04": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": "11.20-11.55 P5b",
+  "bemerkung": null
+},
+"2025-09-06": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Janine",
+      "Daniela"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-08": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": " 14:15-15:00 P4a",
+  "bemerkung": null
+},
+"2025-09-09": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Aniko"
+    ]
+  },
+  "klassenbesuch": " 14:15-15:00 P4a",
+  "bemerkung": null
+},
+"2025-09-10": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-11": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": "11.20-11.55 P5b",
+  "bemerkung": null
+},
+"2025-09-12": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-13": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Daniela",
+      "Debora"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-29": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-04": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Janine"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-16": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Aniko"
+    ]
+  },
+  "klassenbesuch": " 14:15-15:00 P4a",
+  "bemerkung": "19:00 Uhr Teamsitzung"
+},
+"2025-09-15": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Sarah"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": " 7.35 B1a Susann Jost",
+  "bemerkung": "Einführung / Bookstar"
+},
+"2025-09-17": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Daniela"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-18": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": "11.20-11.55 P5b",
+  "bemerkung": null
+},
+"2025-09-19": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-20": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Debora",
+      "Susanne"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-24": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Janine",
+      "Daniela"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": "P4b Actionbound"
+},
+"2025-09-25": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": "11.20-11.55 P5b",
+  "bemerkung": null
+},
+"2025-09-26": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-09-27": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko",
+      "Susanne"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-11": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne",
+      "Daniela"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-08-18": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": " 14:15-15:00 P4a",
+  "bemerkung": null
+},
+"2025-08-25": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Sarah"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": " 8.30 - 9.15 ",
+  "bemerkung": "Bookstar bei S1 (?), bei Bettina in Klasse"
+},
+"2025-09-01": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": " 14:15-15:00 P4a",
+  "bemerkung": null
+},
+"2025-09-22": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": " 14:15-15:00 P4a",
+  "bemerkung": null
+},
+"2025-10-17": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": "9:00 Verslimorgen "
+},
+"2025-10-14": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Sarah"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-15": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Janine"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-16": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-18": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Daniela",
+      "Debora"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-20": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-21": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Aniko"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": "19:00 Uhr Sitzung"
+},
+"2025-10-22": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Daniela"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-23": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-24": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-25": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Debora",
+      "Susanne"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-28": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Aniko",
+      "Daniela"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": "17:00 Uhr Musikschulkonzert"
+},
+"2025-10-29": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Janine"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-30": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-10-31": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Janine"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": "14:00 Uhr Gschichte-Ziit"
+},
+"2025-10-27": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-01": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko",
+      "Daniela"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-04": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Daniela"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": "Markt "
+},
+"2025-11-05": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-06": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-07": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-08": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne",
+      "Janine"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-10": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": "19:00 Uhr Kärtli-Kurs mit Yoli"
+},
+"2025-11-11": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Aniko"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-12": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Janine"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-13": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-14": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-15": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko",
+      "Daniela"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-17": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-18": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Aniko"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-19": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Daniela"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-20": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-21": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-22": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Daniela",
+      "Debora"
+      "Aniko"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-25": {
+  "oeffnungszeiten": {
+    "Morgen": [],
+    "Nachmittag": [
+      "Aniko"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-26": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Janine"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-27": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne"
+    ],
+    "Nachmittag": [
+      "Debora"
+    ]
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+},
+"2025-11-28": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Aniko"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": "9:00 Uhr Verslimorgen"
+},
+"2025-11-29": {
+  "oeffnungszeiten": {
+    "Morgen": [
+      "Susanne",
+      "Aniko"
+    ],
+    "Nachmittag": []
+  },
+  "klassenbesuch": null,
+  "bemerkung": null
+}
+
