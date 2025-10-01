@@ -106,7 +106,7 @@ with col1:
 if "start_date" not in st.session_state:
     #aktueller Wochenanfang(Montag)
     today=data.today()
-    st.session_state.start_date=today-timedelat(days=today.weekday())
+    st.session_state.start_date=today-timedelta(days=today.weekday())
      
 start_date= st.session_state.start_date
 days =[start_date + timedelta(days=i) for i in range(7)]
