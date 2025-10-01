@@ -34,7 +34,7 @@ def save_kontrollen(data_dict, sha):
         else:
             repo.create_file(FILE_PATH, commit_message, new_content, branch=BRANCH)
     except GithubException as e:
-        if e.status == 422 and "already exists" in str(e):
+        if e.status == 422:
             contents = repo.get_contents(FILE_PATH, ref=BRANCH)
             repo.update_file(FILE_PATH, commit_message, new_content, contents.sha, branch=BRANCH)
         else:
