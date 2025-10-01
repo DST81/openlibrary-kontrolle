@@ -4,8 +4,7 @@
       "Morgen": [
         "Aniko"
       ],
-      "Nachmittag": [],
-      "Abend": []
+      "Nachmittag": []
     },
     "klassenbesuch": null,
     "bemerkung": null
@@ -17,9 +16,6 @@
       ],
       "Nachmittag": [
         "Debora"
-      ],
-      "Abend": [
-        "Debora"
       ]
     },
     "klassenbesuch": null,
@@ -30,8 +26,7 @@
       "Morgen": [
         "Janine"
       ],
-      "Nachmittag": [],
-      "Abend": []
+      "Nachmittag": []
     },
     "klassenbesuch": null,
     "bemerkung": null
@@ -40,10 +35,6 @@
     "oeffnungszeiten": {
       "Morgen": [],
       "Nachmittag": [
-        "Daniela",
-        "Aniko"
-      ],
-      "Abend": [
         "Daniela",
         "Aniko"
       ]
@@ -57,8 +48,7 @@
         "Debora",
         "Janine"
       ],
-      "Nachmittag": [],
-      "Abend": []
+      "Nachmittag": []
     },
     "klassenbesuch": null,
     "bemerkung": null
@@ -69,8 +59,7 @@
         "Susanne",
         "Daniela"
       ],
-      "Nachmittag": [],
-      "Abend": []
+      "Nachmittag": []
     },
     "klassenbesuch": null,
     "bemerkung": "10:00-12:00 Erzählcafé"
