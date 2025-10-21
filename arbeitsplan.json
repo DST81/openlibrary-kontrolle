@@ -1075,5 +1075,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2025-12-27": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Daniela",
+        "Susanne"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
