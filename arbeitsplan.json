@@ -916,5 +916,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Adventsfenster und Märli"
+  },
+  "2025-12-02": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Aniko"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
