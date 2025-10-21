@@ -904,5 +904,17 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Märli"
+  },
+  "2025-12-22": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Susanne",
+        "Aniko",
+        "Debora"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Adventsfenster und Märli"
   }
 }
