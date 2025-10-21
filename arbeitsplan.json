@@ -1086,5 +1086,17 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-01-03": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Aniko",
+        "Debora",
+        "Janine"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Neujahrsapero"
   }
 }
