@@ -1022,5 +1022,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Erzählcafe"
+  },
+  "2025-12-16": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Aniko"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
