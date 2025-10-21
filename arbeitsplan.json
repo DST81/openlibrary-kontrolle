@@ -894,5 +894,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Märli"
+  },
+  "2025-12-15": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Debora"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Märli"
   }
 }
