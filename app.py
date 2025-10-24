@@ -7,7 +7,6 @@ import math
 from babel.dates import format_date
 from github.GithubException import GithubException
 
-
 #Repo-Infos
 GITHUB_USER="DST81"
 REPO_NAME="openlibrary-kontrolle"
