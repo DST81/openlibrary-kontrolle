@@ -929,7 +929,9 @@
   },
   "2025-12-03": {
     "oeffnungszeiten": {
-      "Morgen": [],
+      "Morgen": [
+        "Janine"
+      ],
       "Nachmittag": [
         "Janine"
       ]
