@@ -1213,5 +1213,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-01-21": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Daniela"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
