@@ -1208,11 +1208,12 @@
     "oeffnungszeiten": {
       "Morgen": [],
       "Nachmittag": [
-        "Aniko"
+        "Aniko",
+        "Janine"
       ]
     },
     "klassenbesuch": null,
-    "bemerkung": null
+    "bemerkung": "RückgabeDienstag (Janine kommt ab ca. 17 Uhr)"
   },
   "2026-01-21": {
     "oeffnungszeiten": {
