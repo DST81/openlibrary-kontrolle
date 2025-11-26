@@ -1182,5 +1182,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-01-16": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Debora"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
