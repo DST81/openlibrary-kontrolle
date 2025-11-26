@@ -1245,5 +1245,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": "9:00 Verslimorgen"
+  },
+  "2026-01-24": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Daniela",
+        "Debora"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
