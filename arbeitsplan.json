@@ -1185,7 +1185,9 @@
   },
   "2026-01-16": {
     "oeffnungszeiten": {
-      "Morgen": [],
+      "Morgen": [
+        "Aniko"
+      ],
       "Nachmittag": [
         "Debora"
       ]
