@@ -1415,5 +1415,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Markt"
+  },
+  "2026-03-18": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Janine"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
