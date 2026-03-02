@@ -1598,5 +1598,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-04-13": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Debora",
+        "Aniko"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "8.00  Uhr Büchereinkauf Ferienpass "
   }
 }
