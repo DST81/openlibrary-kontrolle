@@ -1556,5 +1556,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Buchclub 14 Uhr"
+  },
+  "2026-04-02": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Susanne"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
