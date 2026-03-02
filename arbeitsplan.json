@@ -1547,12 +1547,14 @@
   },
   "2026-04-01": {
     "oeffnungszeiten": {
-      "Morgen": [],
+      "Morgen": [
+        "Aniko"
+      ],
       "Nachmittag": [
         "Aniko"
       ]
     },
     "klassenbesuch": null,
-    "bemerkung": null
+    "bemerkung": "Buchclub 14 Uhr"
   }
 }
