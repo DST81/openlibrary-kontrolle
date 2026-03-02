@@ -1384,5 +1384,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-03-13": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Aniko"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "9.00 Uhr Verslimorgen"
   }
 }
