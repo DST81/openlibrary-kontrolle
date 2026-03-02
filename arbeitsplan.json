@@ -1609,5 +1609,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": "8.00  Uhr Büchereinkauf Ferienpass "
+  },
+  "2026-04-18": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Janine",
+        "Daniela"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
