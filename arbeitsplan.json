@@ -1911,7 +1911,9 @@
   },
   "2026-05-28": {
     "oeffnungszeiten": {
-      "Morgen": [],
+      "Morgen": [
+        "Susanne"
+      ],
       "Nachmittag": [
         "Debora"
       ]
