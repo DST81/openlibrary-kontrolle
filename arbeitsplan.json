@@ -1762,5 +1762,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-05-08": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Aniko"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
