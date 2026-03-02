@@ -1738,5 +1738,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-05-06": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Aniko"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Buchclub 14 Uhr"
   }
 }
