@@ -1544,5 +1544,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Buchfindomat abholen Wohlen (Aniko)"
+  },
+  "2026-04-01": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Aniko"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
