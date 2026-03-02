@@ -1498,5 +1498,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-03-27": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Susanne"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "BiblioWeekend 19 Uhr Spieleabend"
   }
 }
