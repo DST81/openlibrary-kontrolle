@@ -1568,5 +1568,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-04-04": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Susanne",
+        "Debora"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Osterhäsli verstecken"
   }
 }
