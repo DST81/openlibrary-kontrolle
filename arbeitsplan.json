@@ -1674,5 +1674,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "10 Uhr Erzählcafé"
+  },
+  "2026-04-28": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Aniko"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
