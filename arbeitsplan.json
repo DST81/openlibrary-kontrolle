@@ -1824,5 +1824,13 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-05-14": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Auffahrt"
   }
 }
