@@ -1930,5 +1930,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": "19 Uhr Literaturschiff "
+  },
+  "2026-05-30": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Daniela",
+        "Susanne"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
