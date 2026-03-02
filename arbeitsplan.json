@@ -1901,7 +1901,10 @@
       "Morgen": [
         "Sarah"
       ],
-      "Nachmittag": []
+      "Nachmittag": [
+        "Susanne",
+        "Debora"
+      ]
     },
     "klassenbesuch": null,
     "bemerkung": "Vorlesetag "
