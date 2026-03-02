@@ -1458,5 +1458,13 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-03-23": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "16.30 Uhr Teamsitzung"
   }
 }
