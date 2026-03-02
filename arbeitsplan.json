@@ -1479,7 +1479,9 @@
   },
   "2026-03-25": {
     "oeffnungszeiten": {
-      "Morgen": [],
+      "Morgen": [
+        "Janine"
+      ],
       "Nachmittag": [
         "Janine"
       ]
