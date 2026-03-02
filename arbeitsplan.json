@@ -1852,5 +1852,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-05-21": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Susanne"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
