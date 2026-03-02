@@ -1908,5 +1908,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Vorlesetag "
+  },
+  "2026-05-28": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Debora"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
