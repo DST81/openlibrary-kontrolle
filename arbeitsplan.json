@@ -1579,5 +1579,13 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Osterhäsli verstecken"
+  },
+  "2026-04-03": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Karfreitag Bibliothek geschlossen"
   }
 }
