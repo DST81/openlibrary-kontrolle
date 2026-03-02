@@ -1348,9 +1348,7 @@
   "2026-03-09": {
     "oeffnungszeiten": {
       "Morgen": [],
-      "Nachmittag": [
-        "Aniko"
-      ]
+      "Nachmittag": []
     },
     "klassenbesuch": null,
     "bemerkung": null
