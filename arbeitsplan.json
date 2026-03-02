@@ -1941,5 +1941,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-06-02": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Aniko"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
