@@ -1587,5 +1587,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Karfreitag Bibliothek geschlossen"
+  },
+  "2026-04-11": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Susanne",
+        "Aniko"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
