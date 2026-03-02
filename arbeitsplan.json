@@ -1845,7 +1845,9 @@
   },
   "2026-05-20": {
     "oeffnungszeiten": {
-      "Morgen": [],
+      "Morgen": [
+        "Janine"
+      ],
       "Nachmittag": []
     },
     "klassenbesuch": null,
