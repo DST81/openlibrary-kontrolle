@@ -1305,10 +1305,12 @@
       "Morgen": [
         "Janine"
       ],
-      "Nachmittag": []
+      "Nachmittag": [
+        "Aniko"
+      ]
     },
     "klassenbesuch": null,
-    "bemerkung": null
+    "bemerkung": "Buchclub 14 Uhr\n"
   },
   "2026-03-05": {
     "oeffnungszeiten": {
