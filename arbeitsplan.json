@@ -1697,7 +1697,9 @@
   },
   "2026-04-30": {
     "oeffnungszeiten": {
-      "Morgen": [],
+      "Morgen": [
+        "Susanne"
+      ],
       "Nachmittag": [
         "Debora"
       ]
