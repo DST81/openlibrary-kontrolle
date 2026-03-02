@@ -1963,5 +1963,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "14 Uhr Buchclub"
+  },
+  "2026-06-04": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Susanne"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
