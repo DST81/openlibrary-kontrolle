@@ -1832,5 +1832,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Auffahrt"
+  },
+  "2026-05-19": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Sarah"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
