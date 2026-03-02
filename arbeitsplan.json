@@ -1523,5 +1523,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": "BiblioWeeeken 26"
+  },
+  "2026-03-29": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Daniela",
+        "Janine"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "BiblioWeekend 26"
   }
 }
