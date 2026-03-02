@@ -1687,7 +1687,9 @@
   },
   "2026-04-29": {
     "oeffnungszeiten": {
-      "Morgen": [],
+      "Morgen": [
+        "Janine"
+      ],
       "Nachmittag": [
         "Janine"
       ]
