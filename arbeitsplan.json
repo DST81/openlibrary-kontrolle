@@ -1486,5 +1486,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-03-26": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Debora"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
