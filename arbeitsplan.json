@@ -1951,5 +1951,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-06-03": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Aniko"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": "14 Uhr Buchclub"
   }
 }
