@@ -1504,7 +1504,10 @@
       "Morgen": [
         "Susanne"
       ],
-      "Nachmittag": []
+      "Nachmittag": [
+        "Daniela",
+        "Debora"
+      ]
     },
     "klassenbesuch": null,
     "bemerkung": "BiblioWeekend 26\n19 Uhr Spieleabend"
