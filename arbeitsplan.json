@@ -1855,7 +1855,9 @@
   },
   "2026-05-21": {
     "oeffnungszeiten": {
-      "Morgen": [],
+      "Morgen": [
+        "Susanne"
+      ],
       "Nachmittag": [
         "Susanne"
       ]
