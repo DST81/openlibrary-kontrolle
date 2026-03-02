@@ -1534,5 +1534,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "BiblioWeekend 26"
+  },
+  "2026-03-31": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Aniko"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Buchfindomat abholen Wohlen (Aniko)"
   }
 }
