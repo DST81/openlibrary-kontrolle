@@ -135,7 +135,7 @@ if 'edit_mode' not in st.session_state:
     st.session_state.edit_mode = None
 
 # Ferienzeitraum (hier anpassen)
-ferien_start =date(2026,7,4)
+ferien_start =date(2026,6,4)
 ferien_ende =date(2026,8,10)
 
 
