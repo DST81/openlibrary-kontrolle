@@ -2135,5 +2135,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Silent Reading"
+  },
+  "2026-07-18": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Daniela",
+        "Aniko"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
