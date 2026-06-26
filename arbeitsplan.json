@@ -2275,5 +2275,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-08-22": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Daniela",
+        "Debora"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
