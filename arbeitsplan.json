@@ -2102,5 +2102,17 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Sommerumtrunk"
+  },
+  "2026-07-08": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Susanne",
+        "Aniko",
+        "Daniela"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Biblioputz"
   }
 }
