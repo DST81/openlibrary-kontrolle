@@ -2091,5 +2091,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-07-04": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Aniko",
+        "Janine"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Sommerumtrunk"
   }
 }
