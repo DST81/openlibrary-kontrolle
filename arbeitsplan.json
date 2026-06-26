@@ -2169,5 +2169,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Biblioputz"
+  },
+  "2026-08-08": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Debora",
+        "Aniko"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
