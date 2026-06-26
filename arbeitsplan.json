@@ -2157,5 +2157,17 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-07-27": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Debora",
+        "Daniela",
+        "Sarah"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": "Biblioputz"
   }
 }
