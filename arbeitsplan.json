@@ -2384,5 +2384,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": "Nachmittag Personalausflug"
+  },
+  "2026-09-05": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Debora",
+        "Aniko"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
