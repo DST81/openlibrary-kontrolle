@@ -2405,5 +2405,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-09-09": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Janine"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
