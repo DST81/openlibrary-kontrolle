@@ -2319,5 +2319,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-08-28": {
+    "oeffnungszeiten": {
+      "Morgen": [
+        "Susanne"
+      ],
+      "Nachmittag": []
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
