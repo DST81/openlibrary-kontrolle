@@ -2362,5 +2362,15 @@
     },
     "klassenbesuch": null,
     "bemerkung": "14:00 Uhr Buchclub"
+  },
+  "2026-09-03": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Debora"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
