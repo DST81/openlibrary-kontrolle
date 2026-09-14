@@ -2690,5 +2690,16 @@
     },
     "klassenbesuch": null,
     "bemerkung": null
+  },
+  "2026-10-27": {
+    "oeffnungszeiten": {
+      "Morgen": [],
+      "Nachmittag": [
+        "Aniko",
+        "Daniela"
+      ]
+    },
+    "klassenbesuch": null,
+    "bemerkung": null
   }
 }
